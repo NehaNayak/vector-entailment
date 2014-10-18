@@ -14,11 +14,11 @@ if loadFromMat
     fullVocab = v.We2';
 else
     % The vocabulary that comes with the vector source.
-    fid = fopen('sick_data/words_25d.txt');
+    fid = fopen('/user/sbowman/quant/sick_data/words_25d.txt');
     words = textscan(fid,'%s','Delimiter','\n');
     words = words{1};
     fclose(fid);
-    fullVocab = dlmread('sick_data/vectors_25d.txt', ' ', 0, 1);
+    fullVocab = dlmread('/user/sbowman/quant/sick_data/vectors_25d.txt', ' ', 0, 1);
 end
 
 fullWordmap = containers.Map(words,2:length(words) + 1);
