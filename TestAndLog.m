@@ -40,6 +40,13 @@ if mod(modelState.step, options.testFreq) == 0
         testAcc = TestModel(CostGradFunc, modelState.theta, modelState.thetaDecoder, testDatasets, modelState.constWordFeatures, hyperParams);
         modelState.bestTestAcc = max(testAcc, modelState.bestTestAcc);
         hyperParams.showExamples = false;
+
+	
+	if (testAcc == modelState.bestTestAcc)
+		% Write a checkpoint to disk.
+		save([options.name, '/', 'ckpt-best-', options.runName, datestr(now, 'yymmddHHMMSS'),...
+       			'@', num2str(modelState.step)] , 'modelState');
+	end
     else
         testAcc = -1;
     end
@@ -58,7 +65,7 @@ elseif mod(modelState.step, options.costFreq) == 0
     cost = mean(modelState.lastHundredCosts(1:min(modelState.step, 100)));
 end
 
-if mod(modelState.step, options.checkpointFreq) == 0 && modelState.step > 0 || testAcc==modelState.bestTestAcc
+if (mod(modelState.step, options.checkpointFreq) == 0 && modelState.step > 0)
     % Write a checkpoint to disk.
     save([options.name, '/', 'ckpt-', options.runName, datestr(now, 'yymmddHHMMSS'),...
        '@', num2str(modelState.step)] , 'modelState');
