@@ -53,6 +53,9 @@ hyperParams.classNLDeriv = @LReLUDeriv;
 % If set, don't try to keep the entire training data set in memory at once.
 hyperParams.fragmentData = false;
 
+% Whether to initialise trees as pairs
+hyperParams.pairInit=false;
+
 %%% minFunc options: %%%
 
 options.Method = 'lbfgs';

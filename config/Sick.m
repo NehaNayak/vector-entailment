@@ -1,4 +1,4 @@
-function [ hyperParams, options, wordMap, relationMap ] = Sick(dataflag, transDepth, penult, lambda, tot, mbs, lr, trainwords, frag)
+function [ hyperParams, options, wordMap, relationMap ] = Sick(dataflag, transDepth, penult, lambda, tot, mbs, lr, trainwords, frag, pairInit)
 % Configuration for experiments involving the SemEval SICK challenge and ImageFlickr 30k. 
 
 [hyperParams, options] = Defaults();
@@ -26,12 +26,32 @@ hyperParams.useThirdOrderComparison = tot;
 hyperParams.loadWords = true;
 hyperParams.trainWords = trainwords;
 
+% Whether to intialise trees in pairs
+hyperParams.pairInit=pairInit
+
 % How many examples to run before taking a parameter update step on the accumulated gradients.
 options.miniBatchSize = mbs;
 
 options.lr = lr;
 
-if findstr(dataflag, 'sick-only')
+if findstr(dataflag, 'sick-ea')
+    wordMap = ...
+        InitializeMaps('sick_data/sick_words_t4.txt');
+    hyperParams.vocabName = 'sot4'; 
+
+    hyperParams.numRelations = 3;
+   	hyperParams.relations = {{'ENTAILMENT', 'CONTRADICTION', 'NEUTRAL'}};
+	relationMap = cell(2, 1);
+	relationMap{1} = containers.Map(hyperParams.relations{1}, 1:length(hyperParams.relations{1}));
+
+    hyperParams.trainFilenames = {'./sick_data/SICK_train_parsed_exactAlign.txt'};    
+    hyperParams.testFilenames = {'./sick_data/SICK_trial_parsed_exactAlign.txt', ...
+    				 './sick_data/SICK_trial_parsed_justneg_exactAlign.txt', ...
+    				 './sick_data/SICK_trial_parsed_noneg_exactAlign.txt', ...
+    				 './sick_data/SICK_trial_parsed_18plusparens_exactAlign.txt', ...
+    				 './sick_data/SICK_trial_parsed_lt18_parens_exactAlign.txt'};
+    hyperParams.splitFilenames = {};
+elseif findstr(dataflag, 'sick-only')
     wordMap = ...
         InitializeMaps('sick_data/sick_words_t4.txt');
     hyperParams.vocabName = 'sot4'; 

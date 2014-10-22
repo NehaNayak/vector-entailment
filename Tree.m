@@ -85,10 +85,15 @@ classdef Tree < handle
                 disp(['Collapsing number ' t.text]);
                 t.wordIndex = wordMap('*NUM*');               
             else
-                if rand > 0.99 % Downsample what gets logged.
-                    disp(['Failed to map word ' t.text]);
-                end
-                t.wordIndex = wordMap('*UNK*');
+		nextTry = strtok(t.text,':');
+		if wordMap.isKey(nextTry)
+			t.wordIndex = wordMap(nextTry);
+		else
+                	if rand > 0.99 % Downsample what gets logged.
+               			disp(['Failed to map word ' t.text]);
+                	end
+                	t.wordIndex = wordMap('*UNK*');
+		end
             end
             assert(t.wordIndex ~= -1, 'Bad leaf!')
         end

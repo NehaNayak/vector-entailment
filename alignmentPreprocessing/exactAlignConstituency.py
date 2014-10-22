@@ -55,7 +55,9 @@ class Tree(object):
 	
 	def shrink(self):
 		if self.canGo:
-			return Leaf(self.printInorder()[:-1])
+			x = self.printInorder()[:-1]
+			head = x.split('_')[1]
+			return Leaf(head+":"+x)
 		if not isinstance(self.left,Leaf):
 			self.left = self.left.shrink()
 		if not isinstance(self.right,Leaf):

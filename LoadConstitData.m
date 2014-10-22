@@ -81,10 +81,19 @@ function [ data ] = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, filen
 
     data = repmat(struct('relation', 0, 'leftTree', Tree(), 'rightTree', Tree()), numElements, 1);
 
-    parfor dataInd = 1:numElements
-        data(dataInd).leftTree = Tree.makeTree(rawData(dataInd).leftText, wordMap);
-        data(dataInd).rightTree = Tree.makeTree(rawData(dataInd).rightText, wordMap);
-        data(dataInd).relation = rawData(dataInd).relation;
+    if (hyperParams.pairInit)
+        parfor dataInd = 1:numElements
+            [pT,hT] = TreePair.makeTreePair(rawData(dataInd).leftText,rawData(dataInd).rightText,wordMap);
+	    data(dataInd).leftTree = pT;
+            data(dataInd).rightTree = hT;
+            data(dataInd).relation = rawData(dataInd).relation;
+    	end
+    else
+        parfor dataInd = 1:numElements
+            data(dataInd).leftTree = Tree.makeTree(rawData(dataInd).leftText, wordMap);
+            data(dataInd).rightTree = Tree.makeTree(rawData(dataInd).rightText, wordMap);
+            data(dataInd).relation = rawData(dataInd).relation;
+    	end
     end
 
     % Turn on if further debugging is needed. Slow.
