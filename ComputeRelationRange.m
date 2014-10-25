@@ -2,8 +2,8 @@ function relationRange = ComputeRelationRange(hyperParams, trueRelation)
 % Figure out which columns of the classifier parameters to use, given a
 % label vector.
 
-assert(sum(trueRelation > 0) == 1)
-assert(length(trueRelation) == length(hyperParams.numRelations))
+%assert(sum(trueRelation > 0) == 1)
+%assert(length(trueRelation) == length(hyperParams.numRelations))
 
 startRelation = 1;
 endRelation = 0;

@@ -47,6 +47,17 @@ if hyperParams.datasetsPortion < 1
         (1:round(hyperParams.datasetsPortion * length(hyperParams.splitFilenames))));
 end
 
+% Load hyperparameters for bootstrap
+
+if hyperParams.pairInit
+	savedParams = '/user/nayakne/scr/vector-entailment/baselineSmall-0.0005-ed0-tr1-pen75-lr0.001/ckpt-best-tr141021235653@400.mat';
+	a = load(savedParams);
+    	modelState = a.modelState;
+	oldTheta=modelState.theta
+	oldThetaDecoder=modelState.thetaDecoder
+	oldWordFeatures=modelState.constWordFeatures
+end
+
 % Load saved parameters if available
 savedParams = '';
 if ~isempty(pretrainingFilename)
@@ -70,7 +81,7 @@ end
 
 % Load training/test data
 [trainDataset, testDatasets] = ...
-    LoadConstitDatasets(wordMap, relationMap, hyperParams);
+    LoadConstitDatasets(wordMap, relationMap, hyperParams, oldTheta, oldThetaDecoder, oldWordFeatures);
 % trainDataset = Symmetrize(trainDataset);
 
 % Trim out individual examples if needed

@@ -361,4 +361,24 @@ classdef Tree < handle
             end            
         end
     end
+
+    methods
+	function new = copy(this)
+                new = feval(class(this));
+
+        	new.daughters = []; % 2 x 1 vector of trees
+        	new.text = this.text;
+        	new.features = this.features; % DIM x 1 vector
+        	new.featuresPreNL = this.featuresPreNL;
+        	new.wordIndex = this.wordIndex; % -1 => Not a lexical item node.
+       		new.transformInnerActivations = this.transformInnerActivations; % Stored activations for the embedding tranform layers.
+        	new.transformActivations = this.transformActivations; % Stored activations for the embedding tranform layers.
+        	new.type = this.type; % 0 - predicate or predicate + neg
+                
+                for i = 1:length(this.daughters)
+                        daughter=this.daughters(i);
+                        new.daughters=[new.daughters;daughter.copy()];
+                end
+        end
+    end
 end

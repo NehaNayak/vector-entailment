@@ -1,5 +1,5 @@
 % Want to distribute this code? Have other questions? -> sbowman@stanford.edu
-function [ data ] = LoadConstitData(filename, wordMap, relationMap, hyperParams, fragment, relationIndex)
+function [ data ] = LoadConstitData(filename, wordMap, relationMap, hyperParams, fragment, relationIndex, theta, decoder, wordFeatures)
 % Load one file of constituent-pair data.
 
 % Append a default prefix if we don't have a full path
@@ -67,23 +67,25 @@ for line = (lastSave + 1):maxLine
     if (mod(nextItemNo, 10000) == 0 && fragment)
         message = ['Lines loaded: ', num2str(nextItemNo), '/~', num2str(maxLine)];
         Log(hyperParams.statlog, message);
-        data = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, filename, hyperParams);
+        data = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, filename, hyperParams, theta, decoder, wordFeatures)
         lastSave = nextItemNo - 1;
     end
 end
 
-data = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, [filename, '-final'], hyperParams);
+data = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, [filename, '-final'], hyperParams, theta, decoder, wordFeatures);
 
 end
 
-function [ data ] = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, filename, hyperParams)
+function [ data ] = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, filename, hyperParams, theta, decoder, wordFeatures)
     numElements = nextItemNo - (lastSave + 1);
 
     data = repmat(struct('relation', 0, 'leftTree', Tree(), 'rightTree', Tree()), numElements, 1);
 
     if (hyperParams.pairInit)
         parfor dataInd = 1:numElements
-            [pT,hT] = TreePair.makeTreePair(rawData(dataInd).leftText,rawData(dataInd).rightText,wordMap);
+          
+	    tp = TreePair(); 
+	    [pT,hT] = tp.makeTreePair(tp,rawData(dataInd).leftText,rawData(dataInd).rightText,wordMap, theta, decoder, wordFeatures, hyperParams);
 	    data(dataInd).leftTree = pT;
             data(dataInd).rightTree = hT;
             data(dataInd).relation = rawData(dataInd).relation;
