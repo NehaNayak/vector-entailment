@@ -1,0 +1,11 @@
+CONTRADICTION	All inanimate things are European.	No inanimate thing is European.
+CONTRADICTION	All seats are European.	No seat is European.
+CONTRADICTION	All benches are European.	No bench is European.
+CONTRADICTION	All woody things are European.	No woody thing is European.
+CONTRADICTION	All plants are European.	No plant is European.
+CONTRADICTION	All trees are European.	No tree is European.
+CONTRADICTION	All oaks are European.	No oak is European.
+CONTRADICTION	All bushes are European.	No bush is European.
+CONTRADICTION	All destructible things are European.	No destructible thing is European.
+CONTRADICTION	All indestructible things are European.	No indestructible thing is European.
+CONTRADICTION	All mammals are European.	No mammal is European.

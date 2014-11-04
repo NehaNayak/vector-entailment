@@ -1,0 +1,38 @@
+All hippos bark.	Some hippos bark.
+All hungry things bark.	Some hungry things bark.
+All non-apes bark.	Some non-apes bark.
+All apes bark.	Some apes bark.
+All animals bark.	Some animals bark.
+All dogs bark.	Some dogs bark.
+All cats bark.	Some cats bark.
+All unable people bark.	Some unable people bark.
+All able people bark.	Some able people bark.
+All Thai people bark.	Some Thai people bark.
+All Asians bark.	Some Asians bark.
+All birds bark.	Some birds bark.
+All crows bark.	Some crows bark.
+All sofas bark.	Some sofas bark.
+All couches bark.	Some couches bark.
+All snails bark.	Some snails bark.
+All vertebrates bark.	Some vertebrates bark.
+All invertebrates bark.	Some invertebrates bark.
+All puppies bark.	Some puppies bark.
+All felines bark.	Some felines bark.
+All mobile people bark.	Some mobile people bark.
+All immobile people bark.	Some immobile people bark.
+All dead people bark.	Some dead people bark.
+All live people bark.	Some live people bark.
+All Europeans bark.	Some Europeans bark.
+All French people bark.	Some French people bark.
+All Parisians bark.	Some Parisians bark.
+All humans bark.	Some humans bark.
+All seats bark.	Some seats bark.
+All benches bark.	Some benches bark.
+All woody things bark.	Some woody things bark.
+All plants bark.	Some plants bark.
+All trees bark.	Some trees bark.
+All oaks bark.	Some oaks bark.
+All bushes bark.	Some bushes bark.
+All destructible things bark.	Some destructible things bark.
+All indestructible things bark.	Some indestructible things bark.
+All mammals bark.	Some mammals bark.

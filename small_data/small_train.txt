@@ -1,0 +1,157 @@
+CONTRADICTION	All hippos are European.	No hippo is European.
+CONTRADICTION	All hungry people are European.	No hungry person is European.
+CONTRADICTION	All non-apes are European.	No non-ape is European.
+CONTRADICTION	All apes are European.	No ape is European.
+CONTRADICTION	All animals are European.	No animal is European.
+CONTRADICTION	All dogs are European.	No dog is European.
+CONTRADICTION	All cats are European.	No cat is European.
+CONTRADICTION	All unable people are European.	No unable person is European.
+CONTRADICTION	All able people are European.	No able person is European.
+CONTRADICTION	All Asians are European.	No Asian is European.
+CONTRADICTION	All birds are European.	No bird is European.
+CONTRADICTION	All crows are European.	No crow is European.
+CONTRADICTION	All sofas are European.	No sofa is European.
+CONTRADICTION	All couches are European.	No couch is European.
+CONTRADICTION	All snails are European.	No snail is European.
+CONTRADICTION	All vertebrates are European.	No vertebrate is European.
+ENTAILMENT	All hippos bark.	Some hippos bark.
+ENTAILMENT	All hungry things bark.	Some hungry things bark.
+ENTAILMENT	All non-apes bark.	Some non-apes bark.
+ENTAILMENT	All apes bark.	Some apes bark.
+ENTAILMENT	All animals bark.	Some animals bark.
+ENTAILMENT	All dogs bark.	Some dogs bark.
+ENTAILMENT	All cats bark.	Some cats bark.
+ENTAILMENT	All unable people bark.	Some unable people bark.
+ENTAILMENT	All able people bark.	Some able people bark.
+ENTAILMENT	All Thai people bark.	Some Thai people bark.
+ENTAILMENT	All Asians bark.	Some Asians bark.
+ENTAILMENT	All birds bark.	Some birds bark.
+ENTAILMENT	All crows bark.	Some crows bark.
+ENTAILMENT	All sofas bark.	Some sofas bark.
+ENTAILMENT	All couches bark.	Some couches bark.
+ENTAILMENT	All snails bark.	Some snails bark.
+NEUTRAL	All hippos are animate.	Some non-ape barks.
+NEUTRAL	All dogs are animate.	Some non-ape barks.
+NEUTRAL	All cats are animate.	Some non-ape barks.
+NEUTRAL	All birds are animate.	Some non-ape barks.
+NEUTRAL	All crows are animate.	Some non-ape barks.
+NEUTRAL	All sofas are animate.	Some non-ape barks.
+NEUTRAL	All couchs are animate.	Some non-ape barks.
+NEUTRAL	All snails are animate.	Some non-ape barks.
+NEUTRAL	All invertebrates are animate.	Some non-ape barks.
+NEUTRAL	All puppies are animate.	Some non-ape barks.
+NEUTRAL	All felines are animate.	Some non-ape barks.
+NEUTRAL	All immobile things are animate.	Some non-ape barks.
+NEUTRAL	All seats are animate.	Some non-ape barks.
+NEUTRAL	All benchs are animate.	Some non-ape barks.
+NEUTRAL	All woody things are animate.	Some non-ape barks.
+NEUTRAL	All plants are animate.	Some non-ape barks.
+NEUTRAL	All trees are animate.	Some non-ape barks.
+NEUTRAL	All oaks are animate.	Some non-ape barks.
+NEUTRAL	All bushes are animate.	Some non-ape barks.
+NEUTRAL	All indestructible thing things are animate.	Some non-ape barks.
+NEUTRAL	All humans are animate.	Some ape barks.
+NEUTRAL	All hippos are animate.	Some animal barks.
+NEUTRAL	All hungry things are animate.	Some animal barks.
+NEUTRAL	All apes are animate.	Some animal barks.
+NEUTRAL	All dogs are animate.	Some animal barks.
+NEUTRAL	All cats are animate.	Some animal barks.
+NEUTRAL	All birds are animate.	Some animal barks.
+NEUTRAL	All crows are animate.	Some animal barks.
+NEUTRAL	All snails are animate.	Some animal barks.
+NEUTRAL	All vertebrates are animate.	Some animal barks.
+NEUTRAL	All invertebrates are animate.	Some animal barks.
+NEUTRAL	All puppys are animate.	Some animal barks.
+NEUTRAL	All felines are animate.	Some animal barks.
+NEUTRAL	All humans are animate.	Some animal barks.
+NEUTRAL	All mammals are animate.	Some animal barks.
+NEUTRAL	All puppys are animate.	Some dog barks.
+NEUTRAL	All Thai people are animate.	Some Asian barks.
+NEUTRAL	All crows are animate.	Some bird barks.
+NEUTRAL	All hippos are animate.	Some vertebrate barks.
+NEUTRAL	All apes are animate.	Some vertebrate barks.
+NEUTRAL	All dogs are animate.	Some vertebrate barks.
+NEUTRAL	All cats are animate.	Some vertebrate barks.
+NEUTRAL	All birds are animate.	Some vertebrate barks.
+NEUTRAL	All crows are animate.	Some vertebrate barks.
+NEUTRAL	All puppys are animate.	Some vertebrate barks.
+CONTRADICTION	( ( All hippos ) ( ( are European ) . ) )	( ( No hippo ) ( ( is European ) . ) )	All hippos are European.	No hippo is European.
+CONTRADICTION	( ( All ( hungry people ) ) ( ( are European ) . ) )	( ( No ( hungry person ) ) ( ( is European ) . ) )	All hungry people are European.	No hungry person is European.
+CONTRADICTION	( ( All non-apes ) ( ( are European ) . ) )	( ( No non-ape ) ( ( is European ) . ) )	All non-apes are European.	No non-ape is European.
+CONTRADICTION	( ( All apes ) ( ( are European ) . ) )	( ( No ape ) ( ( is European ) . ) )	All apes are European.	No ape is European.
+CONTRADICTION	( ( All animals ) ( ( are European ) . ) )	( ( No animal ) ( ( is European ) . ) )	All animals are European.	No animal is European.
+CONTRADICTION	( ( All dogs ) ( ( are European ) . ) )	( ( No dog ) ( ( is European ) . ) )	All dogs are European.	No dog is European.
+CONTRADICTION	( ( All cats ) ( ( are European ) . ) )	( ( No cat ) ( ( is European ) . ) )	All cats are European.	No cat is European.
+CONTRADICTION	( ( All ( unable people ) ) ( ( are European ) . ) )	( ( No ( unable person ) ) ( ( is European ) . ) )	All unable people are European.	No unable person is European.
+CONTRADICTION	( ( All ( able people ) ) ( ( are European ) . ) )	( ( No ( able person ) ) ( ( is European ) . ) )	All able people are European.	No able person is European.
+CONTRADICTION	( ( All Asians ) ( ( are European ) . ) )	( ( No Asian ) ( ( is European ) . ) )	All Asians are European.	No Asian is European.
+CONTRADICTION	( ( All birds ) ( ( are European ) . ) )	( ( No bird ) ( ( is European ) . ) )	All birds are European.	No bird is European.
+CONTRADICTION	( ( All crows ) ( ( are European ) . ) )	( ( No crow ) ( ( is European ) . ) )	All crows are European.	No crow is European.
+CONTRADICTION	( ( All sofas ) ( ( are European ) . ) )	( ( No sofa ) ( ( is European ) . ) )	All sofas are European.	No sofa is European.
+CONTRADICTION	( ( All couches ) ( ( are European ) . ) )	( ( No couch ) ( ( is European ) . ) )	All couches are European.	No couch is European.
+CONTRADICTION	( ( All snails ) ( ( are European ) . ) )	( ( No snail ) ( ( is European ) . ) )	All snails are European.	No snail is European.
+CONTRADICTION	( ( All vertebrates ) ( ( are European ) . ) )	( ( No vertebrate ) ( ( is European ) . ) )	All vertebrates are European.	No vertebrate is European.
+ENTAILMENT	( ( All hippos ) ( bark . ) )	( ( Some hippos ) ( bark . ) )	All hippos bark.	Some hippos bark.
+ENTAILMENT	( ( All ( hungry things ) ) ( bark . ) )	( ( Some ( hungry things ) ) ( bark . ) )	All hungry things bark.	Some hungry things bark.
+ENTAILMENT	( ( All non-apes ) ( bark . ) )	( ( Some non-apes ) ( bark . ) )	All non-apes bark.	Some non-apes bark.
+ENTAILMENT	( ( All apes ) ( bark . ) )	( ( Some apes ) ( bark . ) )	All apes bark.	Some apes bark.
+ENTAILMENT	( ( All animals ) ( bark . ) )	( ( Some animals ) ( bark . ) )	All animals bark.	Some animals bark.
+ENTAILMENT	( ( All dogs ) ( bark . ) )	( ( Some dogs ) ( bark . ) )	All dogs bark.	Some dogs bark.
+ENTAILMENT	( ( All cats ) ( bark . ) )	( ( Some cats ) ( bark . ) )	All cats bark.	Some cats bark.
+ENTAILMENT	( ( All ( unable people ) ) ( bark . ) )	( ( Some ( unable people ) ) ( bark . ) )	All unable people bark.	Some unable people bark.
+ENTAILMENT	( ( All ( able people ) ) ( bark . ) )	( ( Some ( able people ) ) ( bark . ) )	All able people bark.	Some able people bark.
+ENTAILMENT	( ( All ( Thai people ) ) ( bark . ) )	( ( Some ( Thai people ) ) ( bark . ) )	All Thai people bark.	Some Thai people bark.
+ENTAILMENT	( ( All Asians ) ( bark . ) )	( ( Some Asians ) ( bark . ) )	All Asians bark.	Some Asians bark.
+ENTAILMENT	( ( All birds ) ( bark . ) )	( ( Some birds ) ( bark . ) )	All birds bark.	Some birds bark.
+ENTAILMENT	( All ( ( crows bark ) . ) )	( Some ( ( crows bark ) . ) )	All crows bark.	Some crows bark.
+ENTAILMENT	( ( All sofas ) ( bark . ) )	( ( Some sofas ) ( bark . ) )	All sofas bark.	Some sofas bark.
+ENTAILMENT	( ( All couches ) ( bark . ) )	( ( Some couches ) ( bark . ) )	All couches bark.	Some couches bark.
+ENTAILMENT	( ( All snails ) ( bark . ) )	( ( Some snails ) ( bark . ) )	All snails bark.	Some snails bark.
+NEUTRAL	( ( All hippos ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All hippos are animate.	Some non-ape barks.
+NEUTRAL	( ( All dogs ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All dogs are animate.	Some non-ape barks.
+NEUTRAL	( ( All cats ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All cats are animate.	Some non-ape barks.
+NEUTRAL	( ( All birds ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All birds are animate.	Some non-ape barks.
+NEUTRAL	( ( All crows ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All crows are animate.	Some non-ape barks.
+NEUTRAL	( ( All sofas ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All sofas are animate.	Some non-ape barks.
+NEUTRAL	( ( All couchs ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All couchs are animate.	Some non-ape barks.
+NEUTRAL	( ( All snails ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All snails are animate.	Some non-ape barks.
+NEUTRAL	( ( All invertebrates ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All invertebrates are animate.	Some non-ape barks.
+NEUTRAL	( ( All puppies ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All puppies are animate.	Some non-ape barks.
+NEUTRAL	( ( All felines ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All felines are animate.	Some non-ape barks.
+NEUTRAL	( ( All ( immobile things ) ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All immobile things are animate.	Some non-ape barks.
+NEUTRAL	( ( All seats ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All seats are animate.	Some non-ape barks.
+NEUTRAL	( ( All benchs ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All benchs are animate.	Some non-ape barks.
+NEUTRAL	( ( All ( woody things ) ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All woody things are animate.	Some non-ape barks.
+NEUTRAL	( ( All plants ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All plants are animate.	Some non-ape barks.
+NEUTRAL	( ( All trees ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All trees are animate.	Some non-ape barks.
+NEUTRAL	( ( All oaks ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All oaks are animate.	Some non-ape barks.
+NEUTRAL	( ( All bushes ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All bushes are animate.	Some non-ape barks.
+NEUTRAL	( ( All ( indestructible ( thing things ) ) ) ( ( are animate ) . ) )	( ( Some non-ape ) ( barks . ) )	All indestructible thing things are animate.	Some non-ape barks.
+NEUTRAL	( ( All humans ) ( ( are animate ) . ) )	( ( Some ape ) ( barks . ) )	All humans are animate.	Some ape barks.
+NEUTRAL	( ( All hippos ) ( ( are animate ) . ) )	( ( Some animal ) ( barks . ) )	All hippos are animate.	Some animal barks.
+NEUTRAL	( ( All ( hungry things ) ) ( ( are animate ) . ) )	( ( Some animal ) ( barks . ) )	All hungry things are animate.	Some animal barks.
+NEUTRAL	( ( All apes ) ( ( are animate ) . ) )	( ( Some animal ) ( barks . ) )	All apes are animate.	Some animal barks.
+NEUTRAL	( ( All dogs ) ( ( are animate ) . ) )	( ( Some animal ) ( barks . ) )	All dogs are animate.	Some animal barks.
+NEUTRAL	( ( All cats ) ( ( are animate ) . ) )	( ( Some animal ) ( barks . ) )	All cats are animate.	Some animal barks.
+NEUTRAL	( ( All birds ) ( ( are animate ) . ) )	( ( Some animal ) ( barks . ) )	All birds are animate.	Some animal barks.
+NEUTRAL	( ( All crows ) ( ( are animate ) . ) )	( ( Some animal ) ( barks . ) )	All crows are animate.	Some animal barks.
+NEUTRAL	( ( All snails ) ( ( are animate ) . ) )	( ( Some animal ) ( barks . ) )	All snails are animate.	Some animal barks.
+NEUTRAL	( ( All vertebrates ) ( ( are animate ) . ) )	( ( Some animal ) ( barks . ) )	All vertebrates are animate.	Some animal barks.
+NEUTRAL	( ( All invertebrates ) ( ( are animate ) . ) )	( ( Some animal ) ( barks . ) )	All invertebrates are animate.	Some animal barks.
+NEUTRAL	( ( All puppys ) ( ( are animate ) . ) )	( ( Some animal ) ( barks . ) )	All puppys are animate.	Some animal barks.
+NEUTRAL	( ( All felines ) ( ( are animate ) . ) )	( ( Some animal ) ( barks . ) )	All felines are animate.	Some animal barks.
+NEUTRAL	( ( All humans ) ( ( are animate ) . ) )	( ( Some animal ) ( barks . ) )	All humans are animate.	Some animal barks.
+NEUTRAL	( ( All mammals ) ( ( are animate ) . ) )	( ( Some animal ) ( barks . ) )	All mammals are animate.	Some animal barks.
+NEUTRAL	( ( All puppys ) ( ( are animate ) . ) )	( ( Some dog ) ( barks . ) )	All puppys are animate.	Some dog barks.
+NEUTRAL	( ( All ( Thai people ) ) ( ( are animate ) . ) )	( ( Some Asian ) ( barks . ) )	All Thai people are animate.	Some Asian barks.
+NEUTRAL	( ( All crows ) ( ( are animate ) . ) )	( ( Some bird ) ( barks . ) )	All crows are animate.	Some bird barks.
+NEUTRAL	( ( All hippos ) ( ( are animate ) . ) )	( ( Some vertebrate ) ( barks . ) )	All hippos are animate.	Some vertebrate barks.
+NEUTRAL	( ( All apes ) ( ( are animate ) . ) )	( ( Some vertebrate ) ( barks . ) )	All apes are animate.	Some vertebrate barks.
+NEUTRAL	( ( All dogs ) ( ( are animate ) . ) )	( ( Some vertebrate ) ( barks . ) )	All dogs are animate.	Some vertebrate barks.
+NEUTRAL	( ( All cats ) ( ( are animate ) . ) )	( ( Some vertebrate ) ( barks . ) )	All cats are animate.	Some vertebrate barks.
+NEUTRAL	( ( All birds ) ( ( are animate ) . ) )	( ( Some vertebrate ) ( barks . ) )	All birds are animate.	Some vertebrate barks.
+NEUTRAL	( ( All crows ) ( ( are animate ) . ) )	( ( Some vertebrate ) ( barks . ) )	All crows are animate.	Some vertebrate barks.
+NEUTRAL	( ( All puppys ) ( ( are animate ) . ) )	( ( Some vertebrate ) ( barks . ) )	All puppys are animate.	Some vertebrate barks.
+CONTRADICTION	( -LRB- ( ( ( ( -LRB- ( All hippos ) ) -RRB- ) ( -LRB- ( ( -LRB- ( ( ( are European ) -RRB- ) . ) ) -RRB- ) ) ) -RRB- ) )	( -LRB- ( ( ( ( -LRB- ( No hippo ) ) -RRB- ) ( -LRB- ( ( -LRB- ( ( ( is European ) -RRB- ) . ) ) -RRB- ) ) ) -RRB- ) )	( ( All hippos ) ( ( are European ) . ) )	( ( No hippo ) ( ( is European ) . ) )
+CONTRADICTION	( -LRB- ( ( -LRB- ( ( ( All ( -LRB- ( ( hungry people ) -RRB- ) ) ) -RRB- ) ( -LRB- ( ( -LRB- ( ( ( are European ) -RRB- ) . ) ) -RRB- ) ) ) ) -RRB- ) )	( -LRB- ( ( -LRB- ( ( ( No ( -LRB- ( ( hungry person ) -RRB- ) ) ) -RRB- ) ( -LRB- ( ( -LRB- ( ( ( is European ) -RRB- ) . ) ) -RRB- ) ) ) ) -RRB- ) )	( ( All ( hungry people ) ) ( ( are European ) . ) )	( ( No ( hungry person ) ) ( ( is European ) . ) )
+CONTRADICTION	( -LRB- ( ( -LRB- ( ( All ( non-apes -RRB- ) ) ( -LRB- ( ( -LRB- ( ( ( are European ) -RRB- ) . ) ) -RRB- ) ) ) ) -RRB- ) )	( -LRB- ( ( -LRB- ( ( No ( non-ape -RRB- ) ) ( -LRB- ( ( -LRB- ( ( ( is European ) -RRB- ) . ) ) -RRB- ) ) ) ) -RRB- ) )	( ( All non-apes ) ( ( are European ) . ) )	( ( No non-ape ) ( ( is European ) . ) )

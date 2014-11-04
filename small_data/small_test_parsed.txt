@@ -1,0 +1,54 @@
+CONTRADICTION	( ( All ( inanimate things ) ) ( ( are European ) . ) )	( ( No ( inanimate thing ) ) ( ( is European ) . ) )	All inanimate things are European.	No inanimate thing is European.
+CONTRADICTION	( ( All seats ) ( ( are European ) . ) )	( ( No seat ) ( ( is European ) . ) )	All seats are European.	No seat is European.
+CONTRADICTION	( ( All benches ) ( ( are European ) . ) )	( ( No bench ) ( ( is European ) . ) )	All benches are European.	No bench is European.
+CONTRADICTION	( ( All ( woody things ) ) ( ( are European ) . ) )	( ( No ( woody thing ) ) ( ( is European ) . ) )	All woody things are European.	No woody thing is European.
+CONTRADICTION	( ( All plants ) ( ( are European ) . ) )	( ( No plant ) ( ( is European ) . ) )	All plants are European.	No plant is European.
+CONTRADICTION	( ( All trees ) ( ( are European ) . ) )	( ( No tree ) ( ( is European ) . ) )	All trees are European.	No tree is European.
+CONTRADICTION	( ( All oaks ) ( ( are European ) . ) )	( ( No oak ) ( ( is European ) . ) )	All oaks are European.	No oak is European.
+CONTRADICTION	( ( All bushes ) ( ( are European ) . ) )	( ( No bush ) ( ( is European ) . ) )	All bushes are European.	No bush is European.
+CONTRADICTION	( ( All ( destructible things ) ) ( ( are European ) . ) )	( ( No ( destructible thing ) ) ( ( is European ) . ) )	All destructible things are European.	No destructible thing is European.
+CONTRADICTION	( ( All ( indestructible things ) ) ( ( are European ) . ) )	( ( No ( indestructible thing ) ) ( ( is European ) . ) )	All indestructible things are European.	No indestructible thing is European.
+CONTRADICTION	( ( All mammals ) ( ( are European ) . ) )	( ( No mammal ) ( ( is European ) . ) )	All mammals are European.	No mammal is European.
+ENTAILMENT	( ( All humans ) ( bark . ) )	( ( Some humans ) ( bark . ) )	All humans bark.	Some humans bark.
+ENTAILMENT	( ( All seats ) ( bark . ) )	( ( Some seats ) ( bark . ) )	All seats bark.	Some seats bark.
+ENTAILMENT	( ( All benches ) ( bark . ) )	( ( Some benches ) ( bark . ) )	All benches bark.	Some benches bark.
+ENTAILMENT	( ( All ( woody things ) ) ( bark . ) )	( ( Some ( woody things ) ) ( bark . ) )	All woody things bark.	Some woody things bark.
+ENTAILMENT	( ( All plants ) ( bark . ) )	( ( Some plants ) ( bark . ) )	All plants bark.	Some plants bark.
+ENTAILMENT	( ( All trees ) ( bark . ) )	( ( Some trees ) ( bark . ) )	All trees bark.	Some trees bark.
+ENTAILMENT	( ( All oaks ) ( bark . ) )	( ( Some oaks ) ( bark . ) )	All oaks bark.	Some oaks bark.
+ENTAILMENT	( ( All bushes ) ( bark . ) )	( ( Some bushes ) ( bark . ) )	All bushes bark.	Some bushes bark.
+ENTAILMENT	( ( All ( destructible things ) ) ( bark . ) )	( ( Some ( destructible things ) ) ( bark . ) )	All destructible things bark.	Some destructible things bark.
+ENTAILMENT	( ( All ( indestructible things ) ) ( bark . ) )	( ( Some ( indestructible things ) ) ( bark . ) )	All indestructible things bark.	Some indestructible things bark.
+ENTAILMENT	( ( All mammals ) ( bark . ) )	( ( Some mammals ) ( bark . ) )	All mammals bark.	Some mammals bark.
+NEUTRAL	( ( All hippos ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All hippos are animate.	Some destructible thing barks.
+NEUTRAL	( ( All apes ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All apes are animate.	Some destructible thing barks.
+NEUTRAL	( ( All animals ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All animals are animate.	Some destructible thing barks.
+NEUTRAL	( ( All dogs ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All dogs are animate.	Some destructible thing barks.
+NEUTRAL	( ( All cats ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All cats are animate.	Some destructible thing barks.
+NEUTRAL	( ( All birds ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All birds are animate.	Some destructible thing barks.
+NEUTRAL	( ( All crows ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All crows are animate.	Some destructible thing barks.
+NEUTRAL	( ( All sofas ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All sofas are animate.	Some destructible thing barks.
+NEUTRAL	( ( All couches ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All couches are animate.	Some destructible thing barks.
+NEUTRAL	( ( All snails ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All snails are animate.	Some destructible thing barks.
+NEUTRAL	( ( All vertebrates ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All vertebrates are animate.	Some destructible thing barks.
+NEUTRAL	( ( All invertebrates ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All invertebrates are animate.	Some destructible thing barks.
+NEUTRAL	( ( All puppies ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All puppies are animate.	Some destructible thing barks.
+NEUTRAL	( ( All felines ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All felines are animate.	Some destructible thing barks.
+NEUTRAL	( ( All ( dead things ) ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All dead things are animate.	Some destructible thing barks.
+NEUTRAL	( ( All ( live things ) ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All live things are animate.	Some destructible thing barks.
+NEUTRAL	( ( All humans ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All humans are animate.	Some destructible thing barks.
+NEUTRAL	( ( All seats ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All seats are animate.	Some destructible thing barks.
+NEUTRAL	( ( All benches ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All benches are animate.	Some destructible thing barks.
+NEUTRAL	( ( All ( woody things ) ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All woody things are animate.	Some destructible thing barks.
+NEUTRAL	( ( All plants ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All plants are animate.	Some destructible thing barks.
+NEUTRAL	( ( All trees ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All trees are animate.	Some destructible thing barks.
+NEUTRAL	( ( All oaks ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All oaks are animate.	Some destructible thing barks.
+NEUTRAL	( ( All bushes ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All bushes are animate.	Some destructible thing barks.
+NEUTRAL	( ( All mammals ) ( ( are animate ) . ) )	( ( Some ( destructible thing ) ) ( barks . ) )	All mammals are animate.	Some destructible thing barks.
+NEUTRAL	( ( All hippos ) ( ( are animate ) . ) )	( ( Some mammal ) ( barks . ) )	All hippos are animate.	Some mammal barks.
+NEUTRAL	( ( All apes ) ( ( are animate ) . ) )	( ( Some mammal ) ( barks . ) )	All apes are animate.	Some mammal barks.
+NEUTRAL	( ( All dogs ) ( ( are animate ) . ) )	( ( Some mammal ) ( barks . ) )	All dogs are animate.	Some mammal barks.
+NEUTRAL	( ( All cats ) ( ( are animate ) . ) )	( ( Some mammal ) ( barks . ) )	All cats are animate.	Some mammal barks.
+NEUTRAL	( ( All puppies ) ( ( are animate ) . ) )	( ( Some mammal ) ( barks . ) )	All puppies are animate.	Some mammal barks.
+NEUTRAL	( ( All felines ) ( ( are animate ) . ) )	( ( Some mammal ) ( barks . ) )	All felines are animate.	Some mammal barks.
+NEUTRAL	( ( All humans ) ( ( are animate ) . ) )	( ( Some mammal ) ( barks . ) )	All humans are animate.	Some mammal barks.

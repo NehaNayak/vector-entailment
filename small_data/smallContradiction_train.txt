@@ -1,0 +1,16 @@
+CONTRADICTION	All hippos are European.	No hippo is European.
+CONTRADICTION	All hungry people are European.	No hungry person is European.
+CONTRADICTION	All non-apes are European.	No non-ape is European.
+CONTRADICTION	All apes are European.	No ape is European.
+CONTRADICTION	All animals are European.	No animal is European.
+CONTRADICTION	All dogs are European.	No dog is European.
+CONTRADICTION	All cats are European.	No cat is European.
+CONTRADICTION	All unable people are European.	No unable person is European.
+CONTRADICTION	All able people are European.	No able person is European.
+CONTRADICTION	All Asians are European.	No Asian is European.
+CONTRADICTION	All birds are European.	No bird is European.
+CONTRADICTION	All crows are European.	No crow is European.
+CONTRADICTION	All sofas are European.	No sofa is European.
+CONTRADICTION	All couches are European.	No couch is European.
+CONTRADICTION	All snails are European.	No snail is European.
+CONTRADICTION	All vertebrates are European.	No vertebrate is European.

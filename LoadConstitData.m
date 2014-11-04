@@ -67,7 +67,7 @@ for line = (lastSave + 1):maxLine
     if (mod(nextItemNo, 10000) == 0 && fragment)
         message = ['Lines loaded: ', num2str(nextItemNo), '/~', num2str(maxLine)];
         Log(hyperParams.statlog, message);
-        data = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, filename, hyperParams, theta, decoder, wordFeatures)
+        data = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, filename, hyperParams, theta, decoder, wordFeatures);
         lastSave = nextItemNo - 1;
     end
 end
@@ -84,8 +84,10 @@ function [ data ] = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, filen
     if (hyperParams.pairInit)
         parfor dataInd = 1:numElements
           
-	    tp = TreePair(); 
-	    [pT,hT] = tp.makeTreePair(tp,rawData(dataInd).leftText,rawData(dataInd).rightText,wordMap, theta, decoder, wordFeatures, hyperParams);
+	    [pT,hT,weights] = TreePair.makeTreePair(rawData(dataInd).leftText,rawData(dataInd).rightText,wordMap, theta, decoder, wordFeatures, hyperParams);
+	    disp(weights)
+	    disp(rawData(dataInd).leftText)
+	    disp(rawData(dataInd).rightText)
 	    data(dataInd).leftTree = pT;
             data(dataInd).rightTree = hT;
             data(dataInd).relation = rawData(dataInd).relation;
@@ -97,6 +99,7 @@ function [ data ] = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, filen
             data(dataInd).relation = rawData(dataInd).relation;
     	end
     end
+
 
     % Turn on if further debugging is needed. Slow.
     % for i = 1:length(data)

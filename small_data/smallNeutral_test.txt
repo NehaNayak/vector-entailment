@@ -1,0 +1,32 @@
+NEUTRAL	All hippos are animate.	Some destructible thing barks.
+NEUTRAL	All apes are animate.	Some destructible thing barks.
+NEUTRAL	All animals are animate.	Some destructible thing barks.
+NEUTRAL	All dogs are animate.	Some destructible thing barks.
+NEUTRAL	All cats are animate.	Some destructible thing barks.
+NEUTRAL	All birds are animate.	Some destructible thing barks.
+NEUTRAL	All crows are animate.	Some destructible thing barks.
+NEUTRAL	All sofas are animate.	Some destructible thing barks.
+NEUTRAL	All couches are animate.	Some destructible thing barks.
+NEUTRAL	All snails are animate.	Some destructible thing barks.
+NEUTRAL	All vertebrates are animate.	Some destructible thing barks.
+NEUTRAL	All invertebrates are animate.	Some destructible thing barks.
+NEUTRAL	All puppies are animate.	Some destructible thing barks.
+NEUTRAL	All felines are animate.	Some destructible thing barks.
+NEUTRAL	All dead things are animate.	Some destructible thing barks.
+NEUTRAL	All live things are animate.	Some destructible thing barks.
+NEUTRAL	All humans are animate.	Some destructible thing barks.
+NEUTRAL	All seats are animate.	Some destructible thing barks.
+NEUTRAL	All benches are animate.	Some destructible thing barks.
+NEUTRAL	All woody things are animate.	Some destructible thing barks.
+NEUTRAL	All plants are animate.	Some destructible thing barks.
+NEUTRAL	All trees are animate.	Some destructible thing barks.
+NEUTRAL	All oaks are animate.	Some destructible thing barks.
+NEUTRAL	All bushes are animate.	Some destructible thing barks.
+NEUTRAL	All mammals are animate.	Some destructible thing barks.
+NEUTRAL	All hippos are animate.	Some mammal barks.
+NEUTRAL	All apes are animate.	Some mammal barks.
+NEUTRAL	All dogs are animate.	Some mammal barks.
+NEUTRAL	All cats are animate.	Some mammal barks.
+NEUTRAL	All puppies are animate.	Some mammal barks.
+NEUTRAL	All felines are animate.	Some mammal barks.
+NEUTRAL	All humans are animate.	Some mammal barks.

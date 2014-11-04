@@ -1,0 +1,11 @@
+ENTAILMENT	All vertebrates bark.	Some vertebrates bark.
+ENTAILMENT	All invertebrates bark.	Some invertebrates bark.
+ENTAILMENT	All puppies bark.	Some puppies bark.
+ENTAILMENT	All felines bark.	Some felines bark.
+ENTAILMENT	All mobile people bark.	Some mobile people bark.
+ENTAILMENT	All immobile people bark.	Some immobile people bark.
+ENTAILMENT	All dead people bark.	Some dead people bark.
+ENTAILMENT	All live people bark.	Some live people bark.
+ENTAILMENT	All Europeans bark.	Some Europeans bark.
+ENTAILMENT	All French people bark.	Some French people bark.
+ENTAILMENT	All Parisians bark.	Some Parisians bark.

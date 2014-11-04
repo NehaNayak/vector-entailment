@@ -1,0 +1,32 @@
+NEUTRAL	All felines are animate.	Some vertebrate barks.
+NEUTRAL	All humans are animate.	Some vertebrate barks.
+NEUTRAL	All mammals are animate.	Some vertebrate barks.
+NEUTRAL	All snails are animate.	Some invertebrate barks.
+NEUTRAL	All cats are animate.	Some feline barks.
+NEUTRAL	All hippos are animate.	Some mobile thing barks.
+NEUTRAL	All apes are animate.	Some mobile thing barks.
+NEUTRAL	All animals are animate.	Some mobile thing barks.
+NEUTRAL	All dogs are animate.	Some mobile thing barks.
+NEUTRAL	All cats are animate.	Some mobile thing barks.
+NEUTRAL	All birds are animate.	Some mobile thing barks.
+NEUTRAL	All crows are animate.	Some mobile thing barks.
+NEUTRAL	All snails are animate.	Some mobile thing barks.
+NEUTRAL	All vertebrates are animate.	Some mobile thing barks.
+NEUTRAL	All puppys are animate.	Some mobile thing barks.
+NEUTRAL	All felines are animate.	Some mobile thing barks.
+NEUTRAL	All humans are animate.	Some mobile thing barks.
+NEUTRAL	All mammals are animate.	Some mobile thing barks.
+NEUTRAL	All hungry things are animate.	Some live thing barks.
+NEUTRAL	All French people are animate.	Some European barks.
+NEUTRAL	All Parisians are animate.	Some European barks.
+NEUTRAL	All Parisians are animate.	Some French person barks.
+NEUTRAL	All barks are animate.	Some animate barks.
+NEUTRAL	All dead things are animate.	Some inanimate thing barks.
+NEUTRAL	All plants are animate.	Some inanimate thing barks.
+NEUTRAL	All sofas are animate.	Some seat barks.
+NEUTRAL	All couches are animate.	Some seat barks.
+NEUTRAL	All benches are animate.	Some seat barks.
+NEUTRAL	All trees are animate.	Some plant barks.
+NEUTRAL	All oaks are animate.	Some plant barks.
+NEUTRAL	All bushes are animate.	Some plant barks.
+NEUTRAL	All oaks are animate.	Some tree barks.

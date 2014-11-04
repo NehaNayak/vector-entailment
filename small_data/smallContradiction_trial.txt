@@ -1,0 +1,11 @@
+CONTRADICTION	All invertebrates are European.	No invertebrate is European.
+CONTRADICTION	All barks are European.	No bark is European.
+CONTRADICTION	All puppies are European.	No puppy is European.
+CONTRADICTION	All felines are European.	No feline is European.
+CONTRADICTION	All mobile people are European.	No mobile person is European.
+CONTRADICTION	All immobile people are European.	No immobile person is European.
+CONTRADICTION	All dead people are European.	No dead person is European.
+CONTRADICTION	All live people are European.	No live person is European.
+CONTRADICTION	All Parisians are European.	No Parisian is European.
+CONTRADICTION	All humans are European.	No human is European.
+CONTRADICTION	All animate things are European.	No animate thing is European.

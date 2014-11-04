@@ -1,0 +1,16 @@
+ENTAILMENT	All hippos bark.	Some hippos bark.
+ENTAILMENT	All hungry things bark.	Some hungry things bark.
+ENTAILMENT	All non-apes bark.	Some non-apes bark.
+ENTAILMENT	All apes bark.	Some apes bark.
+ENTAILMENT	All animals bark.	Some animals bark.
+ENTAILMENT	All dogs bark.	Some dogs bark.
+ENTAILMENT	All cats bark.	Some cats bark.
+ENTAILMENT	All unable people bark.	Some unable people bark.
+ENTAILMENT	All able people bark.	Some able people bark.
+ENTAILMENT	All Thai people bark.	Some Thai people bark.
+ENTAILMENT	All Asians bark.	Some Asians bark.
+ENTAILMENT	All birds bark.	Some birds bark.
+ENTAILMENT	All crows bark.	Some crows bark.
+ENTAILMENT	All sofas bark.	Some sofas bark.
+ENTAILMENT	All couches bark.	Some couches bark.
+ENTAILMENT	All snails bark.	Some snails bark.

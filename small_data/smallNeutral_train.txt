@@ -1,0 +1,45 @@
+NEUTRAL	All hippos are animate.	Some non-ape barks.
+NEUTRAL	All dogs are animate.	Some non-ape barks.
+NEUTRAL	All cats are animate.	Some non-ape barks.
+NEUTRAL	All birds are animate.	Some non-ape barks.
+NEUTRAL	All crows are animate.	Some non-ape barks.
+NEUTRAL	All sofas are animate.	Some non-ape barks.
+NEUTRAL	All couchs are animate.	Some non-ape barks.
+NEUTRAL	All snails are animate.	Some non-ape barks.
+NEUTRAL	All invertebrates are animate.	Some non-ape barks.
+NEUTRAL	All puppies are animate.	Some non-ape barks.
+NEUTRAL	All felines are animate.	Some non-ape barks.
+NEUTRAL	All immobile things are animate.	Some non-ape barks.
+NEUTRAL	All seats are animate.	Some non-ape barks.
+NEUTRAL	All benchs are animate.	Some non-ape barks.
+NEUTRAL	All woody things are animate.	Some non-ape barks.
+NEUTRAL	All plants are animate.	Some non-ape barks.
+NEUTRAL	All trees are animate.	Some non-ape barks.
+NEUTRAL	All oaks are animate.	Some non-ape barks.
+NEUTRAL	All bushes are animate.	Some non-ape barks.
+NEUTRAL	All indestructible thing things are animate.	Some non-ape barks.
+NEUTRAL	All humans are animate.	Some ape barks.
+NEUTRAL	All hippos are animate.	Some animal barks.
+NEUTRAL	All hungry things are animate.	Some animal barks.
+NEUTRAL	All apes are animate.	Some animal barks.
+NEUTRAL	All dogs are animate.	Some animal barks.
+NEUTRAL	All cats are animate.	Some animal barks.
+NEUTRAL	All birds are animate.	Some animal barks.
+NEUTRAL	All crows are animate.	Some animal barks.
+NEUTRAL	All snails are animate.	Some animal barks.
+NEUTRAL	All vertebrates are animate.	Some animal barks.
+NEUTRAL	All invertebrates are animate.	Some animal barks.
+NEUTRAL	All puppys are animate.	Some animal barks.
+NEUTRAL	All felines are animate.	Some animal barks.
+NEUTRAL	All humans are animate.	Some animal barks.
+NEUTRAL	All mammals are animate.	Some animal barks.
+NEUTRAL	All puppys are animate.	Some dog barks.
+NEUTRAL	All Thai people are animate.	Some Asian barks.
+NEUTRAL	All crows are animate.	Some bird barks.
+NEUTRAL	All hippos are animate.	Some vertebrate barks.
+NEUTRAL	All apes are animate.	Some vertebrate barks.
+NEUTRAL	All dogs are animate.	Some vertebrate barks.
+NEUTRAL	All cats are animate.	Some vertebrate barks.
+NEUTRAL	All birds are animate.	Some vertebrate barks.
+NEUTRAL	All crows are animate.	Some vertebrate barks.
+NEUTRAL	All puppys are animate.	Some vertebrate barks.

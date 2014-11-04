@@ -1,0 +1,11 @@
+ENTAILMENT	All humans bark.	Some humans bark.
+ENTAILMENT	All seats bark.	Some seats bark.
+ENTAILMENT	All benches bark.	Some benches bark.
+ENTAILMENT	All woody things bark.	Some woody things bark.
+ENTAILMENT	All plants bark.	Some plants bark.
+ENTAILMENT	All trees bark.	Some trees bark.
+ENTAILMENT	All oaks bark.	Some oaks bark.
+ENTAILMENT	All bushes bark.	Some bushes bark.
+ENTAILMENT	All destructible things bark.	Some destructible things bark.
+ENTAILMENT	All indestructible things bark.	Some indestructible things bark.
+ENTAILMENT	All mammals bark.	Some mammals bark.

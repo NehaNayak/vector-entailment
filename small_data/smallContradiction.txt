@@ -1,0 +1,38 @@
+All hippos are European.	No hippo is European.
+All hungry people are European.	No hungry person is European.
+All non-apes are European.	No non-ape is European.
+All apes are European.	No ape is European.
+All animals are European.	No animal is European.
+All dogs are European.	No dog is European.
+All cats are European.	No cat is European.
+All unable people are European.	No unable person is European.
+All able people are European.	No able person is European.
+All Asians are European.	No Asian is European.
+All birds are European.	No bird is European.
+All crows are European.	No crow is European.
+All sofas are European.	No sofa is European.
+All couches are European.	No couch is European.
+All snails are European.	No snail is European.
+All vertebrates are European.	No vertebrate is European.
+All invertebrates are European.	No invertebrate is European.
+All barks are European.	No bark is European.
+All puppies are European.	No puppy is European.
+All felines are European.	No feline is European.
+All mobile people are European.	No mobile person is European.
+All immobile people are European.	No immobile person is European.
+All dead people are European.	No dead person is European.
+All live people are European.	No live person is European.
+All Parisians are European.	No Parisian is European.
+All humans are European.	No human is European.
+All animate things are European.	No animate thing is European.
+All inanimate things are European.	No inanimate thing is European.
+All seats are European.	No seat is European.
+All benches are European.	No bench is European.
+All woody things are European.	No woody thing is European.
+All plants are European.	No plant is European.
+All trees are European.	No tree is European.
+All oaks are European.	No oak is European.
+All bushes are European.	No bush is European.
+All destructible things are European.	No destructible thing is European.
+All indestructible things are European.	No indestructible thing is European.
+All mammals are European.	No mammal is European.
