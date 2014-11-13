@@ -38,20 +38,13 @@ maxLine = length(C{1});
 % Which nextItemNo was the last to be included in the last MAT file.
 lastSave = 0;
 
-% Turn on to speed up gradient checks:
-% maxLine = 5;
-
-if matlabpool('size') == 0 % checking to see if my pool is already open
-    matlabpool;
-end
-
 % Iterate over examples
 for line = (lastSave + 1):maxLine
     if ~isempty(C{1}{line}) 
         splitLine = textscan(C{1}{line}, '%s', 'delimiter', '\t');
         splitLine = splitLine{1};
         
-        if ~(splitLine{1} == '%')
+        if (sum(splitLine{1} == '%') == 0) && (size(splitLine, 1) >= 3)
             % Skip commented lines
             if nargin > 5
                 rawData(nextItemNo - lastSave).relation = zeros(length(hyperParams.numRelations), 1);
@@ -63,9 +56,11 @@ for line = (lastSave + 1):maxLine
             rawData(nextItemNo - lastSave).leftText = splitLine{2};
             rawData(nextItemNo - lastSave).rightText = splitLine{3};
             nextItemNo = nextItemNo + 1;
+        else
+            disp('Skipped line.');
         end
     end
-    if (mod(nextItemNo, 10000) == 0 && fragment)
+    if (mod(nextItemNo - 1, 10000) == 0 && nextItemNo > 0 && fragment)
         message = ['Lines loaded: ', num2str(nextItemNo), '/~', num2str(maxLine)];
         Log(hyperParams.statlog, message);
         data = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, filename, hyperParams);
@@ -73,7 +68,12 @@ for line = (lastSave + 1):maxLine
     end
 end
 
-data = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, [filename, '-final'], hyperParams);
+if fragment
+    data = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, [filename, '-final'], hyperParams);
+else
+    data = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, [filename, '-full'], hyperParams);
+end
+    
 
 end
 

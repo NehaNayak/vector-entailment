@@ -22,10 +22,24 @@ classdef Tree < handle
     end
     
     methods(Static)
+        function t = printAllProperties(obj)
+            disp(obj.text)
+            disp(obj.features)
+            disp(obj.featuresPreNL)
+            disp(obj.wordIndex)
+            disp(obj.transformInnerActivations)
+            disp(obj.transformActivations)
+            disp(obj.type)
+            disp('(')
+            for daughterInd = 1:length(obj.daguhters)
+                printAllProperties(obj.daguhters(daughterInd))
+            end
+            disp(')')
+        end
 
         function t = makeTree(iText, wordMap)
             assert(~isempty(iText), 'Bad tree input text.');
-            tyingMap = GetTyingMap(wordMap); % TODO
+            % tyingMap = GetTyingMap(wordMap); % TODO
             
             % Parsing strategy example:          
             % ( a b ) ( c d )
@@ -51,7 +65,7 @@ classdef Tree < handle
             for i = 1:length(C)
                 if ~strcmp(C{i}, '(') && ~strcmp(C{i}, ')')
                     % Turn words into leaf nodes
-                    stack{stackTop + 1} = Tree.makeLeaf(C{i}, wordMap, tyingMap);
+                    stack{stackTop + 1} = Tree.makeLeaf(C{i}, wordMap);
                     stackTop = stackTop + 1;
                 elseif strcmp(C{i}, ')')
                     % Merge at the ends of constituents
@@ -76,12 +90,11 @@ classdef Tree < handle
             assert((length(t.daughters) > 0 || t.wordIndex ~= -1), 'Bad tree!')
         end
         
-        function t = makeLeaf(iText, wordMap, tyingMap)
+        function t = makeLeaf(iText, wordMap)
             t = Tree();
             t.text = lower(iText);
             if wordMap.isKey(t.text)
                 t.wordIndex = wordMap(t.text);
-                % t.type = tyingMap(t.wordIndex);
             elseif all(ismember(t.text, '0123456789.-'))
                 disp(['Collapsing number ' t.text]);
                 t.wordIndex = wordMap('*NUM*');               
@@ -169,20 +182,22 @@ classdef Tree < handle
                 lFeatures = obj.daughters(1).weight*obj.daughters(1).getFeatures();
                 rFeatures = obj.daughters(2).weight*obj.daughters(2).getFeatures();
                 
-                if size(compBias, 2) == 1 % if not untied
+                if size(compBias, 2) <= 1 % if not untied
                     typeInd = 1;
                 else
+                    'Tying may not be supported...'
                     typeInd = obj.daughters(1).getType();
                 end
                
-                if size(compMatrices, 1) ~= 0
-                    obj.featuresPreNL = ComputeInnerTensorLayer( ...
+                if length(compMatrices) ~= 0
+                    [obj.features, obj.featuresPreNL] = ComputeTensorLayer(...
                         lFeatures, rFeatures, compMatrices(:,:,:,typeInd),...
-                        compMatrix(:,:,typeInd), compBias(:,typeInd));
-                    obj.features = compNL(obj.featuresPreNL);
+                        compMatrix(:,:,typeInd), compBias(:,typeInd), compNL);
+                elseif length(compMatrix) ~= 0
+                    [obj.features, obj.featuresPreNL] = ComputeRNNLayer(lFeatures, rFeatures,...
+                        compMatrix(:,:,typeInd), compBias(:,typeInd), compNL);
                 else
-                    obj.features = compNL(compMatrix(:,:,typeInd) * ...
-                        [lFeatures; rFeatures] + compBias(:,typeInd));
+                    obj.features = ComputeSummingLayer(lFeatures, rFeatures);
                 end
             else
                 if length(embeddingTransformMatrix) == 0
@@ -215,18 +230,21 @@ classdef Tree < handle
                    upwardEmbeddingTransformMatrixGradients, ...
                    upwardEmbeddingTransformBiasGradients ] = ...
             getGradient(obj, delta, wordFeatures, compMatrices, ...
-                        compMatrix, compBias, embeddingTransformMatrix, embeddingTransformBias, compNLDeriv, hyperParams)
+                        compMatrix, compBias, embeddingTransformMatrix, embeddingTransformBias, ...
+                        compNLDeriv, hyperParams)
             % Note: Delta should be a column vector.
             
-            DIM = size(compBias, 1);
+            DIM = length(delta);
             NUMTRANS = size(embeddingTransformMatrix, 3);
-                    
-            if size(compBias, 2) == 1 % Check if using tied composition parameters
+
+            if size(compBias, 2) == 1 % Using tied composition parameters
                 NUMCOMP = 1;
-            else
-                NUMCOMP = 3;
+            elseif size(compBias, 2) == 0 % Using summing
+                NUMCOMP = 0;
+            else % Untied RNN
+                NUMCOMP = 3; % TODO: Hardcoded for now, here and elsewhere.
             end
- 
+
             upwardWordGradients = sparse([], [], [], ...
                 size(wordFeatures, 1), size(wordFeatures, 2), 10);            
             
@@ -235,6 +253,7 @@ classdef Tree < handle
             else
                 upwardCompositionMatricesGradients = zeros(DIM, DIM, DIM, NUMCOMP);
             end
+
             upwardCompositionMatrixGradients = zeros(DIM, 2 * DIM, NUMCOMP);
             upwardCompositionBiasGradients = zeros(DIM, NUMCOMP);
             upwardEmbeddingTransformMatrixGradients = zeros(DIM, DIM, NUMTRANS);
@@ -250,33 +269,40 @@ classdef Tree < handle
                 lFeatures = obj.daughters(1).getFeatures();
                 rFeatures = obj.daughters(2).getFeatures();
                 
-                if size(compMatrices, 1) == 0
-                    [tempCompositionMatrixGradients, ...
-                        tempCompositionBiasGradients, compDeltaLeft, ...
-                        compDeltaRight] = ...
-                      ComputeLayerGradients(lFeatures, rFeatures, ...
-                          compMatrix(:,:,typeInd), ...
-                          compBias(:,typeInd), delta, ...
-                          compNLDeriv);
-                    tempCompositionMatricesGradients = compMatrices;
-                else
+                if length(compMatrices) ~= 0 % RNTN
                     [tempCompositionMatricesGradients, ...
                         tempCompositionMatrixGradients, ...
                         tempCompositionBiasGradients, compDeltaLeft, ...
                         compDeltaRight] = ...
-                      ComputeTensorLayerGradients(lFeatures, rFeatures, ...
+                    ComputeTensorLayerGradients(lFeatures, rFeatures, ...
                           compMatrices(:,:,:,typeInd), ...
                           compMatrix(:,:,typeInd), ...
                           compBias(:,typeInd), delta, ...
                           compNLDeriv, obj.featuresPreNL);
-                end
 
-                upwardCompositionMatricesGradients(:,:,:,typeInd) = ...
-                    tempCompositionMatricesGradients;
-                upwardCompositionMatrixGradients(:,:,typeInd) = ...
-                    tempCompositionMatrixGradients;
-                upwardCompositionBiasGradients(:,typeInd) = ...
-                    tempCompositionBiasGradients;
+                    upwardCompositionMatricesGradients(:,:,:,typeInd) = ...
+                        tempCompositionMatricesGradients;
+                    upwardCompositionMatrixGradients(:,:,typeInd) = ...
+                        tempCompositionMatrixGradients;
+                    upwardCompositionBiasGradients(:,typeInd) = ...
+                        tempCompositionBiasGradients;
+                elseif length(compMatrix) ~= 0 % RNN
+                    [tempCompositionMatrixGradients, ...
+                        tempCompositionBiasGradients, compDeltaLeft, ...
+                        compDeltaRight] = ...
+                    ComputeRNNLayerGradients(lFeatures, rFeatures, ...
+                          compMatrix(:,:,typeInd), ...
+                          compBias(:,typeInd), delta, ...
+                          compNLDeriv, obj.featuresPreNL);
+
+                    upwardCompositionMatrixGradients(:,:,typeInd) = ...
+                        tempCompositionMatrixGradients;
+                    upwardCompositionBiasGradients(:,typeInd) = ...
+                        tempCompositionBiasGradients;
+                else % Summing network
+                    [compDeltaLeft, compDeltaRight] = ...
+                      ComputeSummingLayerGradients(delta);                 
+                end
                   
                 % Take gradients from the left child
                 [ incomingWordGradients, ...
