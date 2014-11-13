@@ -1,0 +1,106 @@
+21-Oct-2014 23:49:12: Model config:                         dim: 25
+    embeddingTransformDepth: 0
+                   topDepth: 1
+                  penultDim: 75
+                     lambda: 5.0000e-04
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+               testFraction: 0.1000
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                    minFunc: 0
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               fragmentData: 0
+                   pairInit: 0
+                  loadWords: 1
+                 trainWords: 1
+                  vocabName: 'sot4'
+               numRelations: 3
+                  relations: {{1x3 cell}}
+             trainFilenames: {'./small_data/small_train_parsed.txt'}
+              testFilenames: {'./small_data/small_trial_parsed.txt'}
+             splitFilenames: {}
+                 foldNumber: 1
+                       name: 'baselineSmall-0.0005-ed0-tr1-pen75-lr0.001'
+                    statlog: 3
+                 examplelog: 4
+               showExamples: 0
+             showConfusions: 0
+
+
+21-Oct-2014 23:49:12: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 250
+      miniBatchSize: 64
+                 lr: 1.0000e-03
+           costFreq: 200
+           testFreq: 100
+      confusionFreq: 400
+       examplesFreq: 800
+     checkpointFreq: 2400
+            runName: 'tr'
+     resetSumSqFreq: 500000
+               name: 'baselineSmall-0.0005-ed0-tr1-pen75-lr0.001'
+
+
+21-Oct-2014 23:49:12: Randomly initializing.
+21-Oct-2014 23:49:13: Loading the vocabulary.
+21-Oct-2014 23:51:00: Loading training dataset ./small_data/small_train_parsed.txt
+21-Oct-2014 23:51:23: Loading test dataset ./small_data/small_trial_parsed.txt
+21-Oct-2014 23:51:24: Training
+21-Oct-2014 23:51:27: MacroF1:     0.1128    0.1128    0.1128
+
+
+21-Oct-2014 23:51:27: pass 0 step 0 train acc: 0.22293 test acc: 0.2037      0.2037      0.2037 (best: 0.2037      0.2037      0.2037)
+21-Oct-2014 23:51:27: pass 0 step 0 cost: 5.5471      1.1021       4.445
+21-Oct-2014 23:52:49: MacroF1:     0.2481    0.2481    0.2481
+
+
+21-Oct-2014 23:52:49: pass 33 step 100 train acc: 0.57325 test acc: 0.59259     0.59259     0.59259 (best: 0.59259     0.59259     0.59259)
+21-Oct-2014 23:54:10: MacroF1:     0.2481    0.2481    0.2481
+
+
+21-Oct-2014 23:54:11: pass 66 step 200 train acc: 0.57325 test acc: 0.59259     0.59259     0.59259 (best: 0.59259     0.59259     0.59259)
+21-Oct-2014 23:54:11: pass 66 step 200 cost: 5.199     0.89684      4.3022
+21-Oct-2014 23:55:30: MacroF1:     0.4321    0.4321    0.4321
+
+
+21-Oct-2014 23:55:30: pass 99 step 300 train acc: 0.63057 test acc: 0.62963     0.62963     0.62963 (best: 0.62963     0.62963     0.62963)
+21-Oct-2014 23:55:33: MacroF1:     0.4321    0.4321    0.4321
+
+
+21-Oct-2014 23:55:33: pass 100 step 300 train acc: 0.63057 test acc: 0.62963     0.62963     0.62963 (best: 0.62963     0.62963     0.62963)
+21-Oct-2014 23:56:52: Test data:
+21-Oct-2014 23:56:53: MacroF1:     0.5613    0.5613    0.5613
+
+
+21-Oct-2014 23:56:53: pass 133 step 400 train acc: 0.67516 test acc: 0.74074     0.74074     0.74074 (best: 0.74074     0.74074     0.74074)
+21-Oct-2014 23:56:53: pass 133 step 400 cost: 4.9625     0.73335      4.2292
+21-Oct-2014 23:58:13: MacroF1:     0.5186    0.5186    0.5186
+
+
+21-Oct-2014 23:58:13: pass 166 step 500 train acc: 0.67516 test acc: 0.72222     0.72222     0.72222 (best: 0.74074     0.74074     0.74074)
+21-Oct-2014 23:59:32: MacroF1:     0.5186    0.5186    0.5186
+
+
+21-Oct-2014 23:59:32: pass 199 step 600 train acc: 0.67516 test acc: 0.72222     0.72222     0.72222 (best: 0.74074     0.74074     0.74074)
+21-Oct-2014 23:59:32: pass 199 step 600 cost: 4.8527     0.68044      4.1723
+21-Oct-2014 23:59:35: MacroF1:     0.5186    0.5186    0.5186
+
+
+21-Oct-2014 23:59:35: pass 200 step 600 train acc: 0.67516 test acc: 0.72222     0.72222     0.72222 (best: 0.74074     0.74074     0.74074)
+21-Oct-2014 23:59:35: pass 200 step 600 cost: 4.8527     0.68044      4.1723
+22-Oct-2014 00:00:54: MacroF1:     0.5428    0.5428    0.5428
+
+
+22-Oct-2014 00:00:54: pass 233 step 700 train acc: 0.67516 test acc: 0.72222     0.72222     0.72222 (best: 0.74074     0.74074     0.74074)

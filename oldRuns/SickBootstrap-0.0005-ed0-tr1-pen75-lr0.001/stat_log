@@ -1,0 +1,232 @@
+04-Nov-2014 19:32:14: Model config:                         dim: 25
+    embeddingTransformDepth: 0
+                   topDepth: 1
+                  penultDim: 75
+                     lambda: 5.0000e-04
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+               testFraction: 0.1000
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                    minFunc: 0
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               fragmentData: 0
+                   pairInit: 1
+                  loadWords: 1
+                 trainWords: 1
+                  vocabName: 'sot4'
+               numRelations: 3
+                  relations: {{1x3 cell}}
+             trainFilenames: {'./sick_data/SICK_train_parsed_exactAlign.txt'}
+              testFilenames: {1x5 cell}
+             splitFilenames: {}
+                 foldNumber: 1
+                       name: 'SickBootstrap-0.0005-ed0-tr1-pen75-lr0.001'
+                    statlog: 3
+                 examplelog: 4
+               showExamples: 0
+             showConfusions: 0
+
+
+04-Nov-2014 19:32:14: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 250
+      miniBatchSize: 64
+                 lr: 1.0000e-03
+           costFreq: 200
+           testFreq: 100
+      confusionFreq: 400
+       examplesFreq: 800
+     checkpointFreq: 2400
+            runName: 'tr'
+     resetSumSqFreq: 500000
+               name: 'SickBootstrap-0.0005-ed0-tr1-pen75-lr0.001'
+
+
+04-Nov-2014 19:32:14: Randomly initializing.
+04-Nov-2014 19:32:14: Loading the vocabulary.
+04-Nov-2014 19:34:07: Loading training dataset ./sick_data/SICK_train_parsed_exactAlign.txt
+04-Nov-2014 23:29:21: Model config:                         dim: 25
+    embeddingTransformDepth: 0
+                   topDepth: 1
+                  penultDim: 75
+                     lambda: 5.0000e-04
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+               testFraction: 0.1000
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                    minFunc: 0
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               fragmentData: 0
+                   pairInit: 1
+                  loadWords: 1
+                 trainWords: 1
+                  vocabName: 'sot4'
+               numRelations: 3
+                  relations: {{1x3 cell}}
+             trainFilenames: {'./sick_data/SICK_train_parsed_exactAlign.txt'}
+              testFilenames: {1x5 cell}
+             splitFilenames: {}
+                 foldNumber: 1
+                       name: 'SickBootstrap-0.0005-ed0-tr1-pen75-lr0.001'
+                    statlog: 5
+                 examplelog: 6
+               showExamples: 0
+             showConfusions: 0
+
+
+04-Nov-2014 23:29:21: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 250
+      miniBatchSize: 64
+                 lr: 1.0000e-03
+           costFreq: 200
+           testFreq: 100
+      confusionFreq: 400
+       examplesFreq: 800
+     checkpointFreq: 2400
+            runName: 'tr'
+     resetSumSqFreq: 500000
+               name: 'SickBootstrap-0.0005-ed0-tr1-pen75-lr0.001'
+
+
+04-Nov-2014 23:29:21: Randomly initializing.
+04-Nov-2014 23:29:21: Loading the vocabulary.
+04-Nov-2014 23:31:07: Loading training dataset ./sick_data/SICK_train_parsed_exactAlign.txt
+04-Nov-2014 23:34:23: Model config:                         dim: 25
+    embeddingTransformDepth: 0
+                   topDepth: 1
+                  penultDim: 75
+                     lambda: 5.0000e-04
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+               testFraction: 0.1000
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                    minFunc: 0
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               fragmentData: 0
+                   pairInit: 1
+                  loadWords: 1
+                 trainWords: 1
+                  vocabName: 'sot4'
+               numRelations: 3
+                  relations: {{1x3 cell}}
+             trainFilenames: {'./sick_data/SICK_train_parsed_exactAlign.txt'}
+              testFilenames: {1x5 cell}
+             splitFilenames: {}
+                 foldNumber: 1
+                       name: 'SickBootstrap-0.0005-ed0-tr1-pen75-lr0.001'
+                    statlog: 3
+                 examplelog: 4
+               showExamples: 0
+             showConfusions: 0
+
+
+04-Nov-2014 23:34:24: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 250
+      miniBatchSize: 64
+                 lr: 1.0000e-03
+           costFreq: 200
+           testFreq: 100
+      confusionFreq: 400
+       examplesFreq: 800
+     checkpointFreq: 2400
+            runName: 'tr'
+     resetSumSqFreq: 500000
+               name: 'SickBootstrap-0.0005-ed0-tr1-pen75-lr0.001'
+
+
+04-Nov-2014 23:34:24: Randomly initializing.
+04-Nov-2014 23:34:24: Loading the vocabulary.
+04-Nov-2014 23:36:12: Loading training dataset ./sick_data/SICK_train_parsed_exactAlign.txt
+04-Nov-2014 23:53:12: Model config:                         dim: 25
+    embeddingTransformDepth: 0
+                   topDepth: 1
+                  penultDim: 75
+                     lambda: 5.0000e-04
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+               testFraction: 0.1000
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                    minFunc: 0
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               fragmentData: 0
+                   pairInit: 1
+                  loadWords: 1
+                 trainWords: 1
+                  vocabName: 'sot4'
+               numRelations: 3
+                  relations: {{1x3 cell}}
+             trainFilenames: {'./sick_data/SICK_train_parsed_exactAlign.txt'}
+              testFilenames: {1x5 cell}
+             splitFilenames: {}
+                 foldNumber: 1
+                       name: 'SickBootstrap-0.0005-ed0-tr1-pen75-lr0.001'
+                    statlog: 5
+                 examplelog: 6
+               showExamples: 0
+             showConfusions: 0
+
+
+04-Nov-2014 23:53:12: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 250
+      miniBatchSize: 64
+                 lr: 1.0000e-03
+           costFreq: 200
+           testFreq: 100
+      confusionFreq: 400
+       examplesFreq: 800
+     checkpointFreq: 2400
+            runName: 'tr'
+     resetSumSqFreq: 500000
+               name: 'SickBootstrap-0.0005-ed0-tr1-pen75-lr0.001'
+
+
+04-Nov-2014 23:53:12: Randomly initializing.
+04-Nov-2014 23:53:12: Loading the vocabulary.
+04-Nov-2014 23:54:59: Loading training dataset ./sick_data/SICK_train_parsed_exactAlign.txt

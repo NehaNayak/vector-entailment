@@ -1,0 +1,65 @@
+20-Oct-2014 18:36:46: Model config:                         dim: 25
+    embeddingTransformDepth: 0
+                   topDepth: 1
+                  penultDim: 75
+                     lambda: 5.0000e-04
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+               testFraction: 0.1000
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                    minFunc: 0
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               fragmentData: 0
+                   pairInit: 0
+                  loadWords: 1
+                 trainWords: 1
+                  vocabName: 'sot4'
+               numRelations: 3
+                  relations: {{1x3 cell}}
+             trainFilenames: {'./sick_data/SICK_train_parsed_exactAlign.txt'}
+              testFilenames: {1x5 cell}
+             splitFilenames: {}
+                 foldNumber: 1
+                       name: 'baselineExactAlign-0.0005-ed0-tr1-pen75-lr0.001'
+                    statlog: 3
+                 examplelog: 4
+               showExamples: 0
+             showConfusions: 0
+
+
+20-Oct-2014 18:36:47: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 250
+      miniBatchSize: 64
+                 lr: 1.0000e-03
+           costFreq: 200
+           testFreq: 100
+      confusionFreq: 400
+       examplesFreq: 800
+     checkpointFreq: 2400
+            runName: 'tr'
+     resetSumSqFreq: 500000
+               name: 'baselineExactAlign-0.0005-ed0-tr1-pen75-lr0.001'
+
+
+20-Oct-2014 18:36:47: Randomly initializing.
+20-Oct-2014 18:36:47: Loading the vocabulary.
+20-Oct-2014 18:38:35: Loading training dataset ./sick_data/SICK_train_parsed_exactAlign.txt
+20-Oct-2014 18:39:12: Loading test dataset ./sick_data/SICK_trial_parsed_exactAlign.txt
+20-Oct-2014 18:39:15: Loading test dataset ./sick_data/SICK_trial_parsed_justneg_exactAlign.txt
+20-Oct-2014 18:39:15: Loading test dataset ./sick_data/SICK_trial_parsed_noneg_exactAlign.txt
+20-Oct-2014 18:39:18: Loading test dataset ./sick_data/SICK_trial_parsed_18plusparens_exactAlign.txt
+20-Oct-2014 18:39:20: Loading test dataset ./sick_data/SICK_trial_parsed_lt18_parens_exactAlign.txt
+20-Oct-2014 18:39:21: Training
+20-Oct-2014 18:40:08: MacroF1:     0.0859    0.0859    0.0859

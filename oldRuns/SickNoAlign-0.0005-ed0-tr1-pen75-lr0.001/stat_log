@@ -1,0 +1,529 @@
+04-Nov-2014 15:54:39: Model config:                         dim: 25
+    embeddingTransformDepth: 0
+                   topDepth: 1
+                  penultDim: 75
+                     lambda: 5.0000e-04
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+               testFraction: 0.1000
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                    minFunc: 0
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               fragmentData: 0
+                   pairInit: 0
+                  loadWords: 1
+                 trainWords: 1
+                  vocabName: 'sot4'
+               numRelations: 3
+                  relations: {{1x3 cell}}
+             trainFilenames: {'./sick_data/SICK_train_parsed_exactAlign.txt'}
+              testFilenames: {1x5 cell}
+             splitFilenames: {}
+                 foldNumber: 1
+                       name: 'SickNoAlign-0.0005-ed0-tr1-pen75-lr0.001'
+                    statlog: 37
+                 examplelog: 38
+               showExamples: 0
+             showConfusions: 0
+
+
+04-Nov-2014 15:54:39: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 250
+      miniBatchSize: 64
+                 lr: 1.0000e-03
+           costFreq: 200
+           testFreq: 100
+      confusionFreq: 400
+       examplesFreq: 800
+     checkpointFreq: 2400
+            runName: 'tr'
+     resetSumSqFreq: 500000
+               name: 'SickNoAlign-0.0005-ed0-tr1-pen75-lr0.001'
+
+
+04-Nov-2014 15:54:39: Randomly initializing.
+04-Nov-2014 15:54:39: Loading the vocabulary.
+04-Nov-2014 15:56:27: Loading training dataset ./sick_data/SICK_train_parsed_exactAlign.txt
+04-Nov-2014 15:56:42: Loading test dataset ./sick_data/SICK_trial_parsed_exactAlign.txt
+04-Nov-2014 15:56:45: Loading test dataset ./sick_data/SICK_trial_parsed_justneg_exactAlign.txt
+04-Nov-2014 15:56:46: Loading test dataset ./sick_data/SICK_trial_parsed_noneg_exactAlign.txt
+04-Nov-2014 15:56:49: Loading test dataset ./sick_data/SICK_trial_parsed_18plusparens_exactAlign.txt
+04-Nov-2014 15:56:51: Loading test dataset ./sick_data/SICK_trial_parsed_lt18_parens_exactAlign.txt
+04-Nov-2014 15:56:52: Training
+04-Nov-2014 15:57:38: MacroF1:     0.2404    0.2404    0.2404
+
+
+04-Nov-2014 15:57:38: pass 0 step 0 train acc: 0.52799 test acc: 0.564       0.564       0.564 (best: 0.564       0.564       0.564)
+04-Nov-2014 15:57:38: pass 0 step 0 cost: 5.5414      1.0964       4.445
+04-Nov-2014 15:59:40: MacroF1:     0.2404    0.2404    0.2404
+
+
+04-Nov-2014 15:59:41: pass 2 step 100 train acc: 0.52799 test acc: 0.564       0.564       0.564 (best: 0.564       0.564       0.564)
+04-Nov-2014 16:01:42: MacroF1:     0.4632    0.4621    0.4621
+
+
+04-Nov-2014 16:01:42: pass 4 step 200 train acc: 0.59226 test acc: 0.626     0.62533     0.62533 (best: 0.626     0.62533     0.62533)
+04-Nov-2014 16:01:42: pass 4 step 200 cost: 5.1528     0.85024      4.3026
+04-Nov-2014 16:03:45: MacroF1:     0.6104    0.6092    0.6092
+
+
+04-Nov-2014 16:03:45: pass 6 step 300 train acc: 0.62578 test acc: 0.65     0.64933     0.64933 (best: 0.65     0.64933     0.64933)
+04-Nov-2014 16:05:30: Test data:
+04-Nov-2014 16:05:47: MacroF1:     0.5923    0.5932    0.5932
+
+
+04-Nov-2014 16:05:47: pass 8 step 400 train acc: 0.64686 test acc: 0.65        0.65        0.65 (best: 0.65        0.65        0.65)
+04-Nov-2014 16:05:47: pass 8 step 400 cost: 5.0087     0.77864      4.2301
+04-Nov-2014 16:07:49: MacroF1:     0.5993    0.6000    0.6000
+
+
+04-Nov-2014 16:07:49: pass 10 step 500 train acc: 0.65446 test acc: 0.656       0.656       0.656 (best: 0.656       0.656       0.656)
+04-Nov-2014 16:09:51: MacroF1:     0.6098    0.6102    0.6102
+
+
+04-Nov-2014 16:09:51: pass 13 step 600 train acc: 0.66448 test acc: 0.664       0.664       0.664 (best: 0.664       0.664       0.664)
+04-Nov-2014 16:09:51: pass 13 step 600 cost: 4.9122     0.73789      4.1743
+04-Nov-2014 16:11:53: MacroF1:     0.6083    0.6087    0.6087
+
+
+04-Nov-2014 16:11:53: pass 15 step 700 train acc: 0.66586 test acc: 0.664       0.664       0.664 (best: 0.664       0.664       0.664)
+04-Nov-2014 16:13:40: Test data:
+04-Nov-2014 16:13:57: MacroF1:     0.5992    0.6007    0.6007
+
+
+04-Nov-2014 16:13:57: pass 17 step 800 train acc: 0.67588 test acc: 0.658     0.65867     0.65867 (best: 0.664       0.664       0.664)
+04-Nov-2014 16:13:57: pass 17 step 800 cost: 4.8399     0.71247      4.1275
+04-Nov-2014 16:16:00: MacroF1:     0.5995    0.6011    0.6011
+
+
+04-Nov-2014 16:16:00: pass 19 step 900 train acc: 0.68106 test acc: 0.658     0.65867     0.65867 (best: 0.664       0.664       0.664)
+04-Nov-2014 16:18:02: MacroF1:     0.6359    0.6359    0.6359
+
+
+04-Nov-2014 16:18:02: pass 21 step 1000 train acc: 0.68417 test acc: 0.682       0.682       0.682 (best: 0.682       0.682       0.682)
+04-Nov-2014 16:18:02: pass 21 step 1000 cost: 4.7803     0.69384      4.0865
+04-Nov-2014 16:20:05: MacroF1:     0.6261    0.6261    0.6261
+
+
+04-Nov-2014 16:20:05: pass 23 step 1100 train acc: 0.68452 test acc: 0.676       0.676       0.676 (best: 0.682       0.682       0.682)
+04-Nov-2014 16:21:50: Test data:
+04-Nov-2014 16:22:07: MacroF1:     0.6050    0.6038    0.6038
+
+
+04-Nov-2014 16:22:07: pass 26 step 1200 train acc: 0.69143 test acc: 0.658     0.65733     0.65733 (best: 0.682       0.682       0.682)
+04-Nov-2014 16:22:07: pass 26 step 1200 cost: 4.7307     0.68106      4.0497
+04-Nov-2014 16:24:09: MacroF1:     0.6320    0.6320    0.6320
+
+
+04-Nov-2014 16:24:09: pass 28 step 1300 train acc: 0.69765 test acc: 0.678       0.678       0.678 (best: 0.682       0.682       0.682)
+04-Nov-2014 16:26:11: MacroF1:     0.6160    0.6149    0.6149
+
+
+04-Nov-2014 16:26:11: pass 30 step 1400 train acc: 0.7018 test acc: 0.666     0.66533     0.66533 (best: 0.682       0.682       0.682)
+04-Nov-2014 16:26:11: pass 30 step 1400 cost: 4.6799     0.66378      4.0161
+04-Nov-2014 16:28:14: MacroF1:     0.6230    0.6230    0.6230
+
+
+04-Nov-2014 16:28:14: pass 32 step 1500 train acc: 0.70352 test acc: 0.67        0.67        0.67 (best: 0.682       0.682       0.682)
+04-Nov-2014 16:30:00: Test data:
+04-Nov-2014 16:30:18: MacroF1:     0.6201    0.6201    0.6201
+
+
+04-Nov-2014 16:30:18: pass 34 step 1600 train acc: 0.70802 test acc: 0.67        0.67        0.67 (best: 0.682       0.682       0.682)
+04-Nov-2014 16:30:18: pass 34 step 1600 cost: 4.6364     0.65128      3.9851
+04-Nov-2014 16:32:20: MacroF1:     0.6337    0.6337    0.6337
+
+
+04-Nov-2014 16:32:20: pass 36 step 1700 train acc: 0.71009 test acc: 0.68        0.68        0.68 (best: 0.682       0.682       0.682)
+04-Nov-2014 16:34:22: MacroF1:     0.6357    0.6357    0.6357
+
+
+04-Nov-2014 16:34:22: pass 39 step 1800 train acc: 0.71424 test acc: 0.682       0.682       0.682 (best: 0.682       0.682       0.682)
+04-Nov-2014 16:34:22: pass 39 step 1800 cost: 4.5967     0.64052      3.9562
+04-Nov-2014 16:36:24: MacroF1:     0.6403    0.6403    0.6403
+
+
+04-Nov-2014 16:36:24: pass 41 step 1900 train acc: 0.71666 test acc: 0.686       0.686       0.686 (best: 0.686       0.686       0.686)
+04-Nov-2014 16:38:09: Test data:
+04-Nov-2014 16:38:26: MacroF1:     0.6509    0.6509    0.6509
+
+
+04-Nov-2014 16:38:26: pass 43 step 2000 train acc: 0.71804 test acc: 0.692       0.692       0.692 (best: 0.692       0.692       0.692)
+04-Nov-2014 16:38:26: pass 43 step 2000 cost: 4.5602     0.63112      3.9291
+04-Nov-2014 16:40:29: MacroF1:     0.6345    0.6345    0.6345
+
+
+04-Nov-2014 16:40:29: pass 45 step 2100 train acc: 0.72115 test acc: 0.68        0.68        0.68 (best: 0.692       0.692       0.692)
+04-Nov-2014 16:42:31: MacroF1:     0.6511    0.6511    0.6511
+
+
+04-Nov-2014 16:42:31: pass 47 step 2200 train acc: 0.72149 test acc: 0.692       0.692       0.692 (best: 0.692       0.692       0.692)
+04-Nov-2014 16:42:31: pass 47 step 2200 cost: 4.526     0.62258      3.9035
+04-Nov-2014 16:44:32: MacroF1:     0.6490    0.6490    0.6490
+
+
+04-Nov-2014 16:44:32: pass 49 step 2300 train acc: 0.72218 test acc: 0.69        0.69        0.69 (best: 0.692       0.692       0.692)
+04-Nov-2014 16:45:18: MacroF1:     0.6490    0.6490    0.6490
+
+
+04-Nov-2014 16:45:18: pass 50 step 2300 train acc: 0.72218 test acc: 0.69        0.69        0.69 (best: 0.692       0.692       0.692)
+04-Nov-2014 16:47:04: Test data:
+04-Nov-2014 16:47:21: MacroF1:     0.6526    0.6526    0.6526
+
+
+04-Nov-2014 16:47:21: pass 52 step 2400 train acc: 0.7246 test acc: 0.692       0.692       0.692 (best: 0.692       0.692       0.692)
+04-Nov-2014 16:47:22: pass 52 step 2400 cost: 4.4947     0.61556      3.8792
+04-Nov-2014 16:49:24: MacroF1:     0.6398    0.6398    0.6398
+
+
+04-Nov-2014 16:49:24: pass 54 step 2500 train acc: 0.72944 test acc: 0.684       0.684       0.684 (best: 0.692       0.692       0.692)
+04-Nov-2014 16:51:26: MacroF1:     0.6449    0.6449    0.6449
+
+
+04-Nov-2014 16:51:26: pass 56 step 2600 train acc: 0.72909 test acc: 0.686       0.686       0.686 (best: 0.692       0.692       0.692)
+04-Nov-2014 16:51:26: pass 56 step 2600 cost: 4.4644     0.60842       3.856
+04-Nov-2014 16:53:28: MacroF1:     0.6452    0.6452    0.6452
+
+
+04-Nov-2014 16:53:28: pass 58 step 2700 train acc: 0.73013 test acc: 0.686       0.686       0.686 (best: 0.692       0.692       0.692)
+04-Nov-2014 16:55:13: Test data:
+04-Nov-2014 16:55:30: MacroF1:     0.6372    0.6372    0.6372
+
+
+04-Nov-2014 16:55:30: pass 60 step 2800 train acc: 0.73428 test acc: 0.678       0.678       0.678 (best: 0.692       0.692       0.692)
+04-Nov-2014 16:55:30: pass 60 step 2800 cost: 4.4351     0.60127      3.8339
+04-Nov-2014 16:57:32: MacroF1:     0.6372    0.6372    0.6372
+
+
+04-Nov-2014 16:57:32: pass 63 step 2900 train acc: 0.73497 test acc: 0.678       0.678       0.678 (best: 0.692       0.692       0.692)
+04-Nov-2014 16:59:34: MacroF1:     0.6589    0.6589    0.6589
+
+
+04-Nov-2014 16:59:34: pass 65 step 3000 train acc: 0.73117 test acc: 0.696       0.696       0.696 (best: 0.696       0.696       0.696)
+04-Nov-2014 16:59:34: pass 65 step 3000 cost: 4.4085     0.59591      3.8126
+04-Nov-2014 17:01:36: MacroF1:     0.6500    0.6500    0.6500
+
+
+04-Nov-2014 17:01:36: pass 67 step 3100 train acc: 0.73428 test acc: 0.69        0.69        0.69 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:03:22: Test data:
+04-Nov-2014 17:03:40: MacroF1:     0.6544    0.6544    0.6544
+
+
+04-Nov-2014 17:03:40: pass 69 step 3200 train acc: 0.73739 test acc: 0.69        0.69        0.69 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:03:40: pass 69 step 3200 cost: 4.3813     0.58911      3.7922
+04-Nov-2014 17:05:42: MacroF1:     0.6495    0.6495    0.6495
+
+
+04-Nov-2014 17:05:42: pass 71 step 3300 train acc: 0.73946 test acc: 0.69        0.69        0.69 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:07:44: MacroF1:     0.6395    0.6395    0.6395
+
+
+04-Nov-2014 17:07:44: pass 73 step 3400 train acc: 0.74361 test acc: 0.68        0.68        0.68 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:07:44: pass 73 step 3400 cost: 4.3561     0.58356      3.7726
+04-Nov-2014 17:09:46: MacroF1:     0.6487    0.6487    0.6487
+
+
+04-Nov-2014 17:09:46: pass 76 step 3500 train acc: 0.74292 test acc: 0.688       0.688       0.688 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:11:32: Test data:
+04-Nov-2014 17:11:49: MacroF1:     0.6408    0.6408    0.6408
+
+
+04-Nov-2014 17:11:49: pass 78 step 3600 train acc: 0.74568 test acc: 0.682       0.682       0.682 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:11:49: pass 78 step 3600 cost: 4.3317     0.57814      3.7536
+04-Nov-2014 17:13:51: MacroF1:     0.6395    0.6395    0.6395
+
+
+04-Nov-2014 17:13:51: pass 80 step 3700 train acc: 0.74603 test acc: 0.68        0.68        0.68 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:15:53: MacroF1:     0.6414    0.6414    0.6414
+
+
+04-Nov-2014 17:15:53: pass 82 step 3800 train acc: 0.74637 test acc: 0.682       0.682       0.682 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:15:53: pass 82 step 3800 cost: 4.3077     0.57248      3.7353
+04-Nov-2014 17:17:55: MacroF1:     0.6432    0.6432    0.6432
+
+
+04-Nov-2014 17:17:55: pass 84 step 3900 train acc: 0.74603 test acc: 0.684       0.684       0.684 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:19:44: Test data:
+04-Nov-2014 17:20:02: MacroF1:     0.6455    0.6455    0.6455
+
+
+04-Nov-2014 17:20:02: pass 86 step 4000 train acc: 0.75052 test acc: 0.684       0.684       0.684 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:20:02: pass 86 step 4000 cost: 4.2849     0.56736      3.7175
+04-Nov-2014 17:22:04: MacroF1:     0.6383    0.6383    0.6383
+
+
+04-Nov-2014 17:22:04: pass 89 step 4100 train acc: 0.7519 test acc: 0.678       0.678       0.678 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:24:06: MacroF1:     0.6491    0.6491    0.6491
+
+
+04-Nov-2014 17:24:06: pass 91 step 4200 train acc: 0.74948 test acc: 0.688       0.688       0.688 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:24:06: pass 91 step 4200 cost: 4.2626     0.56232      3.7003
+04-Nov-2014 17:26:08: MacroF1:     0.6544    0.6544    0.6544
+
+
+04-Nov-2014 17:26:08: pass 93 step 4300 train acc: 0.75155 test acc: 0.692       0.692       0.692 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:27:54: Test data:
+04-Nov-2014 17:28:11: MacroF1:     0.6420    0.6420    0.6420
+
+
+04-Nov-2014 17:28:11: pass 95 step 4400 train acc: 0.75397 test acc: 0.682       0.682       0.682 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:28:11: pass 95 step 4400 cost: 4.2409     0.55732      3.6836
+04-Nov-2014 17:30:13: MacroF1:     0.6454    0.6454    0.6454
+
+
+04-Nov-2014 17:30:13: pass 97 step 4500 train acc: 0.75259 test acc: 0.684       0.684       0.684 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:32:14: MacroF1:     0.6394    0.6394    0.6394
+
+
+04-Nov-2014 17:32:14: pass 99 step 4600 train acc: 0.75708 test acc: 0.678       0.678       0.678 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:32:14: pass 99 step 4600 cost: 4.2198     0.55248      3.6673
+04-Nov-2014 17:33:00: MacroF1:     0.6394    0.6394    0.6394
+
+
+04-Nov-2014 17:33:00: pass 100 step 4600 train acc: 0.75708 test acc: 0.678       0.678       0.678 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:33:00: pass 100 step 4600 cost: 4.2198     0.55248      3.6673
+04-Nov-2014 17:35:03: MacroF1:     0.6444    0.6444    0.6444
+
+
+04-Nov-2014 17:35:03: pass 102 step 4700 train acc: 0.75639 test acc: 0.682       0.682       0.682 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:36:49: Test data:
+04-Nov-2014 17:37:06: MacroF1:     0.6386    0.6386    0.6386
+
+
+04-Nov-2014 17:37:06: pass 104 step 4800 train acc: 0.75777 test acc: 0.678       0.678       0.678 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:37:06: pass 104 step 4800 cost: 4.1992     0.54771      3.6515
+04-Nov-2014 17:39:10: MacroF1:     0.6444    0.6444    0.6444
+
+
+04-Nov-2014 17:39:10: pass 106 step 4900 train acc: 0.75881 test acc: 0.682       0.682       0.682 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:41:13: MacroF1:     0.6388    0.6388    0.6388
+
+
+04-Nov-2014 17:41:13: pass 108 step 5000 train acc: 0.76261 test acc: 0.678       0.678       0.678 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:41:13: pass 108 step 5000 cost: 4.1798     0.54376      3.6361
+04-Nov-2014 17:43:15: MacroF1:     0.6431    0.6431    0.6431
+
+
+04-Nov-2014 17:43:15: pass 110 step 5100 train acc: 0.76088 test acc: 0.68        0.68        0.68 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:45:00: Test data:
+04-Nov-2014 17:45:17: MacroF1:     0.6387    0.6387    0.6387
+
+
+04-Nov-2014 17:45:17: pass 113 step 5200 train acc: 0.76365 test acc: 0.676       0.676       0.676 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:45:17: pass 113 step 5200 cost: 4.1605     0.53947       3.621
+04-Nov-2014 17:47:20: MacroF1:     0.6485    0.6485    0.6485
+
+
+04-Nov-2014 17:47:20: pass 115 step 5300 train acc: 0.76227 test acc: 0.682       0.682       0.682 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:49:22: MacroF1:     0.6387    0.6387    0.6387
+
+
+04-Nov-2014 17:49:22: pass 117 step 5400 train acc: 0.76503 test acc: 0.676       0.676       0.676 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:49:22: pass 117 step 5400 cost: 4.141     0.53466      3.6064
+04-Nov-2014 17:51:25: MacroF1:     0.6400    0.6400    0.6400
+
+
+04-Nov-2014 17:51:25: pass 119 step 5500 train acc: 0.76745 test acc: 0.676       0.676       0.676 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:53:10: Test data:
+04-Nov-2014 17:53:28: MacroF1:     0.6387    0.6387    0.6387
+
+
+04-Nov-2014 17:53:28: pass 121 step 5600 train acc: 0.76918 test acc: 0.676       0.676       0.676 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:53:28: pass 121 step 5600 cost: 4.1226     0.53061       3.592
+04-Nov-2014 17:55:30: MacroF1:     0.6448    0.6448    0.6448
+
+
+04-Nov-2014 17:55:30: pass 123 step 5700 train acc: 0.76641 test acc: 0.68        0.68        0.68 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:57:31: MacroF1:     0.6448    0.6448    0.6448
+
+
+04-Nov-2014 17:57:31: pass 126 step 5800 train acc: 0.7671 test acc: 0.68        0.68        0.68 (best: 0.696       0.696       0.696)
+04-Nov-2014 17:57:31: pass 126 step 5800 cost: 4.1037     0.52565       3.578
+04-Nov-2014 17:59:34: MacroF1:     0.6448    0.6448    0.6448
+
+
+04-Nov-2014 17:59:34: pass 128 step 5900 train acc: 0.76987 test acc: 0.68        0.68        0.68 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:01:19: Test data:
+04-Nov-2014 18:01:36: MacroF1:     0.6445    0.6445    0.6445
+
+
+04-Nov-2014 18:01:36: pass 130 step 6000 train acc: 0.77021 test acc: 0.678       0.678       0.678 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:01:36: pass 130 step 6000 cost: 4.0858     0.52143      3.5643
+04-Nov-2014 18:03:38: MacroF1:     0.6453    0.6453    0.6453
+
+
+04-Nov-2014 18:03:38: pass 132 step 6100 train acc: 0.77678 test acc: 0.68        0.68        0.68 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:05:40: MacroF1:     0.6460    0.6460    0.6460
+
+
+04-Nov-2014 18:05:40: pass 134 step 6200 train acc: 0.77713 test acc: 0.68        0.68        0.68 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:05:40: pass 134 step 6200 cost: 4.0677     0.51681      3.5509
+04-Nov-2014 18:07:41: MacroF1:     0.6460    0.6460    0.6460
+
+
+04-Nov-2014 18:07:41: pass 136 step 6300 train acc: 0.77678 test acc: 0.68        0.68        0.68 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:09:27: Test data:
+04-Nov-2014 18:09:44: MacroF1:     0.6463    0.6463    0.6463
+
+
+04-Nov-2014 18:09:44: pass 139 step 6400 train acc: 0.77574 test acc: 0.682       0.682       0.682 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:09:44: pass 139 step 6400 cost: 4.0521     0.51426      3.5378
+04-Nov-2014 18:11:46: MacroF1:     0.6431    0.6431    0.6431
+
+
+04-Nov-2014 18:11:46: pass 141 step 6500 train acc: 0.77782 test acc: 0.678       0.678       0.678 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:13:48: MacroF1:     0.6479    0.6479    0.6479
+
+
+04-Nov-2014 18:13:48: pass 143 step 6600 train acc: 0.78196 test acc: 0.68        0.68        0.68 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:13:48: pass 143 step 6600 cost: 4.0334     0.50845       3.525
+04-Nov-2014 18:15:50: MacroF1:     0.6400    0.6400    0.6400
+
+
+04-Nov-2014 18:15:50: pass 145 step 6700 train acc: 0.78127 test acc: 0.674       0.674       0.674 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:17:35: Test data:
+04-Nov-2014 18:17:52: MacroF1:     0.6385    0.6385    0.6385
+
+
+04-Nov-2014 18:17:52: pass 147 step 6800 train acc: 0.78093 test acc: 0.672       0.672       0.672 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:17:52: pass 147 step 6800 cost: 4.0173     0.50493      3.5124
+04-Nov-2014 18:19:53: MacroF1:     0.6361    0.6361    0.6361
+
+
+04-Nov-2014 18:19:53: pass 149 step 6900 train acc: 0.78127 test acc: 0.666       0.666       0.666 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:20:40: MacroF1:     0.6361    0.6361    0.6361
+
+
+04-Nov-2014 18:20:40: pass 150 step 6900 train acc: 0.78127 test acc: 0.666       0.666       0.666 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:22:42: MacroF1:     0.6369    0.6369    0.6369
+
+
+04-Nov-2014 18:22:42: pass 152 step 7000 train acc: 0.78196 test acc: 0.67        0.67        0.67 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:22:42: pass 152 step 7000 cost: 4.0009     0.50085         3.5
+04-Nov-2014 18:24:44: MacroF1:     0.6323    0.6323    0.6323
+
+
+04-Nov-2014 18:24:44: pass 154 step 7100 train acc: 0.78404 test acc: 0.66        0.66        0.66 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:26:29: Test data:
+04-Nov-2014 18:26:47: MacroF1:     0.6365    0.6365    0.6365
+
+
+04-Nov-2014 18:26:47: pass 156 step 7200 train acc: 0.78576 test acc: 0.666       0.666       0.666 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:26:47: pass 156 step 7200 cost: 3.9849     0.49704      3.4879
+04-Nov-2014 18:28:50: MacroF1:     0.6342    0.6342    0.6342
+
+
+04-Nov-2014 18:28:50: pass 158 step 7300 train acc: 0.78507 test acc: 0.666       0.666       0.666 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:30:53: MacroF1:     0.6321    0.6321    0.6321
+
+
+04-Nov-2014 18:30:53: pass 160 step 7400 train acc: 0.78507 test acc: 0.66        0.66        0.66 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:30:53: pass 160 step 7400 cost: 3.9687     0.49272       3.476
+04-Nov-2014 18:32:54: MacroF1:     0.6348    0.6348    0.6348
+
+
+04-Nov-2014 18:32:54: pass 163 step 7500 train acc: 0.78473 test acc: 0.666       0.666       0.666 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:34:39: Test data:
+04-Nov-2014 18:34:56: MacroF1:     0.6343    0.6343    0.6343
+
+
+04-Nov-2014 18:34:56: pass 165 step 7600 train acc: 0.78749 test acc: 0.662       0.662       0.662 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:34:56: pass 165 step 7600 cost: 3.9534     0.48913      3.4643
+04-Nov-2014 18:36:58: MacroF1:     0.6298    0.6298    0.6298
+
+
+04-Nov-2014 18:36:58: pass 167 step 7700 train acc: 0.78853 test acc: 0.658       0.658       0.658 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:39:00: MacroF1:     0.6342    0.6342    0.6342
+
+
+04-Nov-2014 18:39:00: pass 169 step 7800 train acc: 0.79026 test acc: 0.662       0.662       0.662 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:39:00: pass 169 step 7800 cost: 3.9381     0.48529      3.4528
+04-Nov-2014 18:41:02: MacroF1:     0.6342    0.6342    0.6342
+
+
+04-Nov-2014 18:41:02: pass 171 step 7900 train acc: 0.79129 test acc: 0.662       0.662       0.662 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:42:47: Test data:
+04-Nov-2014 18:43:05: MacroF1:     0.6396    0.6396    0.6396
+
+
+04-Nov-2014 18:43:05: pass 173 step 8000 train acc: 0.79406 test acc: 0.664       0.664       0.664 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:43:05: pass 173 step 8000 cost: 3.9233     0.48179      3.4415
+04-Nov-2014 18:45:06: MacroF1:     0.6372    0.6372    0.6372
+
+
+04-Nov-2014 18:45:06: pass 176 step 8100 train acc: 0.79337 test acc: 0.664       0.664       0.664 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:47:08: MacroF1:     0.6342    0.6342    0.6342
+
+
+04-Nov-2014 18:47:08: pass 178 step 8200 train acc: 0.79267 test acc: 0.662       0.662       0.662 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:47:08: pass 178 step 8200 cost: 3.9086     0.47813      3.4305
+04-Nov-2014 18:49:10: MacroF1:     0.6342    0.6342    0.6342
+
+
+04-Nov-2014 18:49:10: pass 180 step 8300 train acc: 0.79371 test acc: 0.662       0.662       0.662 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:50:54: Test data:
+04-Nov-2014 18:51:11: MacroF1:     0.6384    0.6384    0.6384
+
+
+04-Nov-2014 18:51:11: pass 182 step 8400 train acc: 0.79751 test acc: 0.664       0.664       0.664 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:51:11: pass 182 step 8400 cost: 3.8941     0.47456      3.4195
+04-Nov-2014 18:53:14: MacroF1:     0.6448    0.6448    0.6448
+
+
+04-Nov-2014 18:53:14: pass 184 step 8500 train acc: 0.79889 test acc: 0.668       0.668       0.668 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:55:16: MacroF1:     0.6451    0.6451    0.6451
+
+
+04-Nov-2014 18:55:16: pass 186 step 8600 train acc: 0.79889 test acc: 0.668       0.668       0.668 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:55:16: pass 186 step 8600 cost: 3.8799     0.47108      3.4088
+04-Nov-2014 18:57:17: MacroF1:     0.6512    0.6512    0.6512
+
+
+04-Nov-2014 18:57:17: pass 189 step 8700 train acc: 0.80062 test acc: 0.672       0.672       0.672 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:59:03: Test data:
+04-Nov-2014 18:59:21: MacroF1:     0.6354    0.6354    0.6354
+
+
+04-Nov-2014 18:59:21: pass 191 step 8800 train acc: 0.79855 test acc: 0.662       0.662       0.662 (best: 0.696       0.696       0.696)
+04-Nov-2014 18:59:21: pass 191 step 8800 cost: 3.8662      0.4679      3.3982
+04-Nov-2014 19:01:23: MacroF1:     0.6513    0.6513    0.6513
+
+
+04-Nov-2014 19:01:23: pass 193 step 8900 train acc: 0.79959 test acc: 0.67        0.67        0.67 (best: 0.696       0.696       0.696)
+04-Nov-2014 19:03:25: MacroF1:     0.6414    0.6414    0.6414
+
+
+04-Nov-2014 19:03:25: pass 195 step 9000 train acc: 0.79993 test acc: 0.666       0.666       0.666 (best: 0.696       0.696       0.696)
+04-Nov-2014 19:03:25: pass 195 step 9000 cost: 3.8524     0.46456      3.3878
+04-Nov-2014 19:05:27: MacroF1:     0.6440    0.6440    0.6440
+
+
+04-Nov-2014 19:05:27: pass 197 step 9100 train acc: 0.80131 test acc: 0.664       0.664       0.664 (best: 0.696       0.696       0.696)
+04-Nov-2014 19:07:12: Test data:
+04-Nov-2014 19:07:29: MacroF1:     0.6481    0.6481    0.6481
+
+
+04-Nov-2014 19:07:29: pass 199 step 9200 train acc: 0.80304 test acc: 0.67        0.67        0.67 (best: 0.696       0.696       0.696)
+04-Nov-2014 19:07:29: pass 199 step 9200 cost: 3.8383     0.46073      3.3776
+04-Nov-2014 19:07:58: Test data:
+04-Nov-2014 19:08:15: MacroF1:     0.6481    0.6481    0.6481
+
+
+04-Nov-2014 19:08:15: pass 200 step 9200 train acc: 0.80304 test acc: 0.67        0.67        0.67 (best: 0.696       0.696       0.696)
+04-Nov-2014 19:08:15: pass 200 step 9200 cost: 3.8383     0.46073      3.3776
+04-Nov-2014 19:10:17: MacroF1:     0.6420    0.6420    0.6420
+
+
+04-Nov-2014 19:10:17: pass 202 step 9300 train acc: 0.80304 test acc: 0.664       0.664       0.664 (best: 0.696       0.696       0.696)

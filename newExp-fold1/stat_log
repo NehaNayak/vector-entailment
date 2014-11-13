@@ -1,0 +1,669 @@
+10-Oct-2014 10:03:53: Model config:                  foldNumber: 1
+                       name: 'newExp-fold1'
+                    statlog: 3
+                 examplelog: 4
+                  vocabName: 'RC'
+                        dim: 12
+    embeddingTransformDepth: 3
+               fragmentData: 0
+               numRelations: 7
+                  loadWords: 0
+                 trainWords: 1
+                   topDepth: 1
+                  penultDim: 80
+                     lambda: 0.0020
+                  relations: {'#'  '='  '>'  '<'  '|'  '^'  'v'}
+              noPretraining: 1
+                    minFunc: 0
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               showExamples: 0
+             showConfusions: 0
+
+
+10-Oct-2014 10:03:54: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 100
+      miniBatchSize: 10
+                 lr: 0.2000
+           costFreq: 500
+           testFreq: 500
+      confusionFreq: 500
+       examplesFreq: 1000
+     checkpointFreq: 32000
+               name: 'newExp-fold1'
+            runName: 'pre'
+     resetSumSqFreq: 500000
+
+
+10-Oct-2014 10:03:54: Randomly initializing.
+10-Oct-2014 10:03:54: Loading training dataset ./RC/train0
+10-Oct-2014 10:07:47: Model config:                  foldNumber: 1
+                       name: 'newExp-fold1'
+                    statlog: 5
+                 examplelog: 6
+                  vocabName: 'RC'
+                        dim: 12
+    embeddingTransformDepth: 3
+               fragmentData: 0
+               numRelations: 7
+                  loadWords: 0
+                 trainWords: 1
+                   topDepth: 1
+                  penultDim: 80
+                     lambda: 0.0020
+                  relations: {'#'  '='  '>'  '<'  '|'  '^'  'v'}
+              noPretraining: 1
+                    minFunc: 0
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               showExamples: 0
+             showConfusions: 0
+
+
+10-Oct-2014 10:07:47: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 100
+      miniBatchSize: 10
+                 lr: 0.2000
+           costFreq: 500
+           testFreq: 500
+      confusionFreq: 500
+       examplesFreq: 1000
+     checkpointFreq: 32000
+               name: 'newExp-fold1'
+            runName: 'pre'
+     resetSumSqFreq: 500000
+
+
+10-Oct-2014 10:07:47: Randomly initializing.
+10-Oct-2014 10:07:48: Loading training dataset ./RC/older_data/longer/train0
+10-Oct-2014 10:13:00: Model config:                  foldNumber: 1
+                       name: 'newExp-fold1'
+                    statlog: 7
+                 examplelog: 8
+                  vocabName: 'RC'
+                        dim: 12
+    embeddingTransformDepth: 3
+               fragmentData: 0
+               numRelations: 7
+                  loadWords: 0
+                 trainWords: 1
+                   topDepth: 1
+                  penultDim: 80
+                     lambda: 0.0020
+                  relations: {'#'  '='  '>'  '<'  '|'  '^'  'v'}
+              noPretraining: 1
+                    minFunc: 0
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               showExamples: 0
+             showConfusions: 0
+
+
+10-Oct-2014 10:13:00: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 100
+      miniBatchSize: 10
+                 lr: 0.2000
+           costFreq: 500
+           testFreq: 500
+      confusionFreq: 500
+       examplesFreq: 1000
+     checkpointFreq: 32000
+               name: 'newExp-fold1'
+            runName: 'pre'
+     resetSumSqFreq: 500000
+
+
+10-Oct-2014 10:13:00: Randomly initializing.
+10-Oct-2014 10:13:00: Loading training dataset ./RC/older_data/longer/train0
+10-Oct-2014 10:16:03: Model config:                  foldNumber: 1
+                       name: 'newExp-fold1'
+                    statlog: 9
+                 examplelog: 10
+                  vocabName: 'RC'
+                        dim: 12
+    embeddingTransformDepth: 3
+               fragmentData: 0
+               numRelations: 7
+                  loadWords: 0
+                 trainWords: 1
+                   topDepth: 1
+                  penultDim: 80
+                     lambda: 0.0020
+                  relations: {'#'  '='  '>'  '<'  '|'  '^'  'v'}
+              noPretraining: 1
+                    minFunc: 0
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               showExamples: 0
+             showConfusions: 0
+
+
+10-Oct-2014 10:16:03: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 100
+      miniBatchSize: 10
+                 lr: 0.2000
+           costFreq: 500
+           testFreq: 500
+      confusionFreq: 500
+       examplesFreq: 1000
+     checkpointFreq: 32000
+               name: 'newExp-fold1'
+            runName: 'pre'
+     resetSumSqFreq: 500000
+
+
+10-Oct-2014 10:16:03: Randomly initializing.
+10-Oct-2014 10:16:03: Loading training dataset ./RC/older_data/longer/train0
+10-Oct-2014 12:11:29: Model config:                  foldNumber: 1
+                       name: 'newExp-fold1'
+                    statlog: 11
+                 examplelog: 12
+                  vocabName: 'RC'
+                        dim: 12
+    embeddingTransformDepth: 3
+               fragmentData: 0
+               numRelations: 7
+                  loadWords: 0
+                 trainWords: 1
+                   topDepth: 1
+                  penultDim: 80
+                     lambda: 0.0020
+                  relations: {'#'  '='  '>'  '<'  '|'  '^'  'v'}
+              noPretraining: 1
+                    minFunc: 0
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               showExamples: 0
+             showConfusions: 0
+
+
+10-Oct-2014 12:11:29: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 100
+      miniBatchSize: 10
+                 lr: 0.2000
+           costFreq: 500
+           testFreq: 500
+      confusionFreq: 500
+       examplesFreq: 1000
+     checkpointFreq: 32000
+               name: 'newExp-fold1'
+            runName: 'pre'
+     resetSumSqFreq: 500000
+
+
+10-Oct-2014 12:11:29: Randomly initializing.
+10-Oct-2014 12:11:29: Loading training dataset ./RC/older_data/longer/train0
+10-Oct-2014 13:08:01: Model config:                  foldNumber: 1
+                       name: 'newExp-fold1'
+                    statlog: 5
+                 examplelog: 6
+                  vocabName: 'sot4'
+                        dim: 12
+    embeddingTransformDepth: 3
+               fragmentData: 0
+               numRelations: [3 2]
+                  loadWords: 1
+                 trainWords: 0
+                   topDepth: 1
+                  penultDim: 80
+                     lambda: 0.0020
+                  relations: {{1x3 cell}  {1x2 cell}}
+              noPretraining: 1
+                    minFunc: 0
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               showExamples: 0
+             showConfusions: 0
+
+
+10-Oct-2014 13:08:01: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 100
+      miniBatchSize: 10
+                 lr: 0.2000
+           costFreq: 500
+           testFreq: 500
+      confusionFreq: 500
+       examplesFreq: 1000
+     checkpointFreq: 32000
+               name: 'newExp-fold1'
+            runName: 'pre'
+     resetSumSqFreq: 500000
+
+
+10-Oct-2014 13:08:01: Randomly initializing.
+10-Oct-2014 13:08:01: Loading the vocabulary.
+14-Oct-2014 09:40:23: Model config:                  foldNumber: 1
+                       name: 'newExp-fold1'
+                    statlog: 5
+                 examplelog: 6
+                  vocabName: 'sot4'
+                        dim: 12
+    embeddingTransformDepth: 3
+               fragmentData: 0
+               numRelations: [3 2]
+                  loadWords: 1
+                 trainWords: 0
+                   topDepth: 1
+                  penultDim: 80
+                     lambda: 0.0020
+                  relations: {{1x3 cell}  {1x2 cell}}
+              noPretraining: 1
+                    minFunc: 0
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               showExamples: 0
+             showConfusions: 0
+
+
+14-Oct-2014 09:40:23: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 100
+      miniBatchSize: 10
+                 lr: 0.2000
+           costFreq: 500
+           testFreq: 500
+      confusionFreq: 500
+       examplesFreq: 1000
+     checkpointFreq: 32000
+               name: 'newExp-fold1'
+            runName: 'pre'
+     resetSumSqFreq: 500000
+
+
+14-Oct-2014 09:40:23: Randomly initializing.
+14-Oct-2014 09:40:23: Loading the vocabulary.
+14-Oct-2014 09:53:19: Model config:                  foldNumber: 1
+                       name: 'newExp-fold1'
+                    statlog: 7
+                 examplelog: 8
+                  vocabName: 'sot4'
+                        dim: 12
+    embeddingTransformDepth: 3
+               fragmentData: 0
+               numRelations: [3 2]
+                  loadWords: 1
+                 trainWords: 0
+                   topDepth: 1
+                  penultDim: 80
+                     lambda: 0.0020
+                  relations: {{1x3 cell}  {1x2 cell}}
+              noPretraining: 1
+                    minFunc: 0
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               showExamples: 0
+             showConfusions: 0
+
+
+14-Oct-2014 09:53:19: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 100
+      miniBatchSize: 10
+                 lr: 0.2000
+           costFreq: 500
+           testFreq: 500
+      confusionFreq: 500
+       examplesFreq: 1000
+     checkpointFreq: 32000
+               name: 'newExp-fold1'
+            runName: 'pre'
+     resetSumSqFreq: 500000
+
+
+14-Oct-2014 09:53:19: Randomly initializing.
+14-Oct-2014 09:53:19: Loading the vocabulary.
+14-Oct-2014 13:26:29: Model config:                  foldNumber: 1
+                       name: 'newExp-fold1'
+                    statlog: 9
+                 examplelog: 10
+                  vocabName: 'sot4'
+                        dim: 12
+    embeddingTransformDepth: 3
+               fragmentData: 0
+               numRelations: [3 2]
+                  loadWords: 1
+                 trainWords: 0
+                   topDepth: 1
+                  penultDim: 80
+                     lambda: 0.0020
+                  relations: {{1x3 cell}  {1x2 cell}}
+              noPretraining: 1
+                    minFunc: 0
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               showExamples: 0
+             showConfusions: 0
+
+
+14-Oct-2014 13:26:29: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 100
+      miniBatchSize: 10
+                 lr: 0.2000
+           costFreq: 500
+           testFreq: 500
+      confusionFreq: 500
+       examplesFreq: 1000
+     checkpointFreq: 32000
+               name: 'newExp-fold1'
+            runName: 'pre'
+     resetSumSqFreq: 500000
+
+
+14-Oct-2014 13:26:29: Randomly initializing.
+14-Oct-2014 13:26:29: Loading the vocabulary.
+14-Oct-2014 13:30:26: Warning: Word vectors are randomly initialized and not trained.
+14-Oct-2014 13:30:26: Loading training dataset ./sick_data/SICK_train_parsed.txt
+14-Oct-2014 13:31:35: Loading test dataset ./sick_data/SICK_trial_parsed.txt
+14-Oct-2014 13:31:42: Loading test dataset ./sick_data/SICK_trial_parsed_justneg.txt
+14-Oct-2014 13:31:43: Loading test dataset ./sick_data/SICK_trial_parsed_noneg.txt
+14-Oct-2014 13:31:48: Loading test dataset ./sick_data/SICK_trial_parsed_18plusparens.txt
+14-Oct-2014 13:31:53: Loading test dataset ./sick_data/SICK_trial_parsed_lt18_parens.txt
+14-Oct-2014 13:31:55: Training
+14-Oct-2014 13:33:08: Model config:                  foldNumber: 1
+                       name: 'newExp-fold1'
+                    statlog: 11
+                 examplelog: 12
+                  vocabName: 'sot4'
+                        dim: 12
+    embeddingTransformDepth: 3
+               fragmentData: 0
+               numRelations: [3 2]
+                  loadWords: 1
+                 trainWords: 0
+                   topDepth: 1
+                  penultDim: 80
+                     lambda: 0.0020
+                  relations: {{1x3 cell}  {1x2 cell}}
+              noPretraining: 1
+                    minFunc: 0
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               showExamples: 0
+             showConfusions: 0
+
+
+14-Oct-2014 13:33:08: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 100
+      miniBatchSize: 10
+                 lr: 0.2000
+           costFreq: 500
+           testFreq: 500
+      confusionFreq: 500
+       examplesFreq: 1000
+     checkpointFreq: 32000
+               name: 'newExp-fold1'
+            runName: 'pre'
+     resetSumSqFreq: 500000
+
+
+14-Oct-2014 13:33:08: Randomly initializing.
+14-Oct-2014 13:33:08: Loading the vocabulary.
+14-Oct-2014 13:40:19: Model config:                  foldNumber: 1
+                       name: 'newExp-fold1'
+                    statlog: 3
+                 examplelog: 4
+                  vocabName: 'sot4'
+                        dim: 25
+    embeddingTransformDepth: 1
+               fragmentData: 0
+               numRelations: [3 2]
+                  loadWords: 1
+                 trainWords: 1
+                   topDepth: 1
+                  penultDim: 80
+                     lambda: 0.0020
+                  relations: {{1x3 cell}  {1x2 cell}}
+              noPretraining: 1
+                    minFunc: 0
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               showExamples: 0
+             showConfusions: 0
+
+
+14-Oct-2014 13:40:19: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 100
+      miniBatchSize: 10
+                 lr: 0.2000
+           costFreq: 500
+           testFreq: 500
+      confusionFreq: 500
+       examplesFreq: 1000
+     checkpointFreq: 32000
+               name: 'newExp-fold1'
+            runName: 'pre'
+     resetSumSqFreq: 500000
+
+
+14-Oct-2014 13:40:19: Randomly initializing.
+14-Oct-2014 13:40:19: Loading the vocabulary.
+14-Oct-2014 13:43:16: Loading training dataset ./sick_data/SICK_train_parsed.txt
+14-Oct-2014 13:44:13: Loading test dataset ./sick_data/SICK_trial_parsed.txt
+14-Oct-2014 13:44:19: Loading test dataset ./sick_data/SICK_trial_parsed_justneg.txt
+14-Oct-2014 13:44:21: Loading test dataset ./sick_data/SICK_trial_parsed_noneg.txt
+14-Oct-2014 13:44:26: Loading test dataset ./sick_data/SICK_trial_parsed_18plusparens.txt
+14-Oct-2014 13:44:30: Loading test dataset ./sick_data/SICK_trial_parsed_lt18_parens.txt
+14-Oct-2014 13:44:32: Training
+14-Oct-2014 13:47:02: Model config:                  foldNumber: 1
+                       name: 'newExp-fold1'
+                    statlog: 3
+                 examplelog: 4
+                  vocabName: 'sot4'
+                        dim: 25
+    embeddingTransformDepth: 1
+               fragmentData: 0
+               numRelations: [3 2]
+                  loadWords: 1
+                 trainWords: 1
+                   topDepth: 1
+                  penultDim: 80
+                     lambda: 0.0020
+                  relations: {{1x3 cell}  {1x2 cell}}
+              noPretraining: 1
+                    minFunc: 0
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               showExamples: 0
+             showConfusions: 0
+
+
+14-Oct-2014 13:47:03: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 100
+      miniBatchSize: 10
+                 lr: 0.2000
+           costFreq: 500
+           testFreq: 500
+      confusionFreq: 500
+       examplesFreq: 1000
+     checkpointFreq: 32000
+               name: 'newExp-fold1'
+            runName: 'pre'
+     resetSumSqFreq: 500000
+
+
+14-Oct-2014 13:47:03: Randomly initializing.
+14-Oct-2014 13:47:03: Loading the vocabulary.
+14-Oct-2014 13:48:51: Loading training dataset ./sick_data/SICK_train_parsed.txt
+14-Oct-2014 13:49:56: Loading test dataset ./sick_data/SICK_trial_parsed.txt
+14-Oct-2014 13:50:02: Loading test dataset ./sick_data/SICK_trial_parsed_justneg.txt
+14-Oct-2014 13:50:04: Loading test dataset ./sick_data/SICK_trial_parsed_noneg.txt
+14-Oct-2014 13:50:09: Loading test dataset ./sick_data/SICK_trial_parsed_18plusparens.txt
+14-Oct-2014 13:50:13: Loading test dataset ./sick_data/SICK_trial_parsed_lt18_parens.txt
+14-Oct-2014 13:50:15: Training
+14-Oct-2014 13:51:16: MacroF1:     0.0859    0.1230    0.0859
+
+
+14-Oct-2014 13:51:16: pass 0 step 0 train acc: 0.16862 test acc: 0.148     0.22629       0.148 (best: 0.148     0.22629       0.148)
+14-Oct-2014 13:51:16: pass 0 step 0 cost: 18.9069       1.1016      17.8053
+14-Oct-2014 13:54:58: Test data:
+14-Oct-2014 13:55:20: MacroF1:     0.4722    0.4810    0.4722
+
+
+14-Oct-2014 13:55:20: pass 1 step 500 train acc: 0.53697 test acc: 0.558     0.54409       0.558 (best: 0.558     0.54409       0.558)
+14-Oct-2014 13:55:20: pass 1 step 500 cost: 5.5126     0.97215      4.5405

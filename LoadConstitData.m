@@ -1,6 +1,7 @@
 % Want to distribute this code? Have other questions? -> sbowman@stanford.edu
-function [ data ] = LoadConstitData(filename, wordMap, relationMap, hyperParams, fragment, relationIndex, theta, decoder, wordFeatures)
+function [ data ] = LoadConstitData(filename, wordMap, relationMap, hyperParams, fragment, relationIndex)
 % Load one file of constituent-pair data.
+
 
 % Append a default prefix if we don't have a full path
 if isempty(strfind(filename, '/'))
@@ -67,16 +68,16 @@ for line = (lastSave + 1):maxLine
     if (mod(nextItemNo, 10000) == 0 && fragment)
         message = ['Lines loaded: ', num2str(nextItemNo), '/~', num2str(maxLine)];
         Log(hyperParams.statlog, message);
-        data = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, filename, hyperParams, theta, decoder, wordFeatures);
+        data = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, filename, hyperParams);
         lastSave = nextItemNo - 1;
     end
 end
 
-data = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, [filename, '-final'], hyperParams, theta, decoder, wordFeatures);
+data = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, [filename, '-final'], hyperParams);
 
 end
 
-function [ data ] = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, filename, hyperParams, theta, decoder, wordFeatures)
+function [ data ] = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, filename, hyperParams)
     numElements = nextItemNo - (lastSave + 1);
 
     data = repmat(struct('relation', 0, 'leftTree', Tree(), 'rightTree', Tree()), numElements, 1);
@@ -84,10 +85,7 @@ function [ data ] = ProcessAndSave(rawData, wordMap, lastSave, nextItemNo, filen
     if (hyperParams.pairInit)
         parfor dataInd = 1:numElements
           
-	    [pT,hT,weights] = TreePair.makeTreePair(rawData(dataInd).leftText,rawData(dataInd).rightText,wordMap, theta, decoder, wordFeatures, hyperParams);
-	    disp(weights)
-	    disp(rawData(dataInd).leftText)
-	    disp(rawData(dataInd).rightText)
+	    [pT,hT] = TreePair.makeTreePair(rawData(dataInd).leftText,rawData(dataInd).rightText,wordMap, hyperParams);
 	    data(dataInd).leftTree = pT;
             data(dataInd).rightTree = hT;
             data(dataInd).relation = rawData(dataInd).relation;

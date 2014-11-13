@@ -1,5 +1,5 @@
 % Want to distribute this code? Have other questions? -> sbowman@stanford.edu
-function [ trainDataset, testDatasetsCell ] = LoadConstitDatasets (wordMap, relationMap, hyperParams, theta, thetaDecoder, wordFeatures)
+function [ trainDataset, testDatasetsCell ] = LoadConstitDatasets (wordMap, relationMap, hyperParams)
 % Load and combine all of the training and test data.
 % This is slow. And can probably be easily improved if it matters.
 
@@ -29,10 +29,10 @@ for i = 1:length(hyperParams.trainFilenames)
         
     if ~hyperParams.fragmentData
         dataset = LoadConstitData(hyperParams.trainFilenames{i}, wordMap, relationMap, ...
-                                  hyperParams, false, relationIndex,theta,thetaDecoder,wordFeatures);
+                                  hyperParams, false, relationIndex);
         trainDataset = [trainDataset; dataset];
     else
-        LoadConstitData(hyperParams.trainFilenames{i}, wordMap, relationMap, hyperParams, true, relationIndex,theta,thetaDecoder,wordFeatures);
+        LoadConstitData(hyperParams.trainFilenames{i}, wordMap, relationMap, hyperParams, true, relationIndex);
     end
         
 end
@@ -45,7 +45,7 @@ for i = 1:length(hyperParams.testFilenames)
     end
 
     Log(hyperParams.statlog, ['Loading test dataset ', hyperParams.testFilenames{i}]);
-    dataset = LoadConstitData(hyperParams.testFilenames{i}, wordMap, relationMap, hyperParams, false, relationIndex,theta,thetaDecoder,wordFeatures);
+    dataset = LoadConstitData(hyperParams.testFilenames{i}, wordMap, relationMap, hyperParams, false, relationIndex);
     testDatasets = [testDatasets, {dataset}];
 end
 
@@ -57,7 +57,7 @@ for i = 1:length(hyperParams.splitFilenames)
     end
 
     Log(hyperParams.statlog, ['Loading split dataset ', hyperParams.splitFilenames{i}]);
-    dataset = LoadConstitData(hyperParams.splitFilenames{i}, wordMap, relationMap, hyperParams, false, relationIndex,theta,thetaDecoder,wordFeatures);
+    dataset = LoadConstitData(hyperParams.splitFilenames{i}, wordMap, relationMap, hyperParams, false, relationIndex);
     lengthOfTestPortion = ceil(length(dataset) * PERCENT_USED_FOR_TESTING);
     startOfTestPortion = 1 + (hyperParams.foldNumber - 1) * lengthOfTestPortion;
     endOfTestPortion = min(hyperParams.foldNumber * lengthOfTestPortion, length(dataset));

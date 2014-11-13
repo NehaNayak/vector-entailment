@@ -1,0 +1,135 @@
+06-Nov-2014 09:05:07: Model config:                         dim: 25
+    embeddingTransformDepth: 0
+                   topDepth: 1
+                  penultDim: 75
+                     lambda: 5.0000e-04
+                       norm: 2
+                     untied: 0
+            datasetsPortion: 1
+                dataPortion: 1
+               testFraction: 0.1000
+              useThirdOrder: 1
+    useThirdOrderComparison: 1
+                    minFunc: 0
+                     compNL: @Sigmoid
+                compNLDeriv: @SigmoidDeriv
+                    classNL: @LReLU
+               classNLDeriv: @LReLUDeriv
+               fragmentData: 0
+                   pairInit: 1
+                  loadWords: 1
+                 trainWords: 1
+                  vocabName: 'sot4'
+               numRelations: 3
+                  relations: {{1x3 cell}}
+             trainFilenames: {'./sick_data/SICK_train_parsed_exactAlign.txt'}
+              testFilenames: {1x5 cell}
+             splitFilenames: {}
+                 foldNumber: 1
+                       name: 'SickNoAlignBootstrap-0.0005-ed0-tr1-pen75-lr0.001'
+                    statlog: 11
+                 examplelog: 12
+               showExamples: 0
+             showConfusions: 0
+
+
+06-Nov-2014 09:05:07: Model training options:              Method: 'lbfgs'
+        MaxFunEvals: 1000
+    DerivativeCheck: 'on'
+            Display: 'full'
+            numDiff: 0
+            LS_init: '2'
+           PlotFcns: []
+          numPasses: 250
+      miniBatchSize: 64
+                 lr: 1.0000e-03
+           costFreq: 200
+           testFreq: 100
+      confusionFreq: 400
+       examplesFreq: 800
+     checkpointFreq: 2400
+            runName: 'tr'
+     resetSumSqFreq: 500000
+               name: 'SickNoAlignBootstrap-0.0005-ed0-tr1-pen75-lr0.001'
+
+
+06-Nov-2014 09:05:07: Randomly initializing.
+06-Nov-2014 09:05:07: Loading the vocabulary.
+06-Nov-2014 09:06:55: Loading training dataset ./sick_data/SICK_train_parsed_exactAlign.txt
+06-Nov-2014 09:36:15: Loading test dataset ./sick_data/SICK_trial_parsed_exactAlign.txt
+06-Nov-2014 09:41:11: Loading test dataset ./sick_data/SICK_trial_parsed_justneg_exactAlign.txt
+06-Nov-2014 09:42:10: Loading test dataset ./sick_data/SICK_trial_parsed_noneg_exactAlign.txt
+06-Nov-2014 09:46:20: Loading test dataset ./sick_data/SICK_trial_parsed_18plusparens_exactAlign.txt
+06-Nov-2014 09:50:30: Loading test dataset ./sick_data/SICK_trial_parsed_lt18_parens_exactAlign.txt
+06-Nov-2014 09:51:21: Training
+06-Nov-2014 09:52:07: MacroF1:     0.0859    0.0859    0.0859
+
+
+06-Nov-2014 09:52:07: pass 0 step 0 train acc: 0.16862 test acc: 0.148       0.148       0.148 (best: 0.148       0.148       0.148)
+06-Nov-2014 09:52:07: pass 0 step 0 cost: 5.5468      1.1018       4.445
+06-Nov-2014 09:54:08: MacroF1:     0.2404    0.2404    0.2404
+
+
+06-Nov-2014 09:54:08: pass 2 step 100 train acc: 0.52799 test acc: 0.564       0.564       0.564 (best: 0.564       0.564       0.564)
+06-Nov-2014 09:56:09: MacroF1:     0.2404    0.2404    0.2404
+
+
+06-Nov-2014 09:56:09: pass 4 step 200 train acc: 0.52799 test acc: 0.564       0.564       0.564 (best: 0.564       0.564       0.564)
+06-Nov-2014 09:56:09: pass 4 step 200 cost: 5.2385     0.93064      4.3079
+06-Nov-2014 09:58:10: MacroF1:     0.2407    0.2407    0.2407
+
+
+06-Nov-2014 09:58:11: pass 6 step 300 train acc: 0.52764 test acc: 0.564       0.564       0.564 (best: 0.564       0.564       0.564)
+06-Nov-2014 09:59:55: Test data:
+06-Nov-2014 10:00:12: MacroF1:     0.3397    0.3397    0.3397
+
+
+06-Nov-2014 10:00:12: pass 8 step 400 train acc: 0.53766 test acc: 0.564       0.564       0.564 (best: 0.564       0.564       0.564)
+06-Nov-2014 10:00:12: pass 8 step 400 cost: 5.1679     0.91495      4.2529
+06-Nov-2014 10:02:14: MacroF1:     0.3558    0.3558    0.3558
+
+
+06-Nov-2014 10:02:14: pass 10 step 500 train acc: 0.54699 test acc: 0.568       0.568       0.568 (best: 0.568       0.568       0.568)
+06-Nov-2014 10:04:14: MacroF1:     0.3713    0.3713    0.3713
+
+
+06-Nov-2014 10:04:14: pass 13 step 600 train acc: 0.55287 test acc: 0.578       0.578       0.578 (best: 0.578       0.578       0.578)
+06-Nov-2014 10:04:14: pass 13 step 600 cost: 5.1186      0.9057      4.2129
+06-Nov-2014 10:06:15: MacroF1:     0.3683    0.3683    0.3683
+
+
+06-Nov-2014 10:06:15: pass 15 step 700 train acc: 0.55563 test acc: 0.578       0.578       0.578 (best: 0.578       0.578       0.578)
+06-Nov-2014 10:08:00: Test data:
+06-Nov-2014 10:08:18: MacroF1:     0.3720    0.3720    0.3720
+
+
+06-Nov-2014 10:08:18: pass 17 step 800 train acc: 0.55771 test acc: 0.58        0.58        0.58 (best: 0.58        0.58        0.58)
+06-Nov-2014 10:08:18: pass 17 step 800 cost: 5.0778      0.8977      4.1801
+06-Nov-2014 10:10:19: MacroF1:     0.3720    0.3720    0.3720
+
+
+06-Nov-2014 10:10:19: pass 19 step 900 train acc: 0.55771 test acc: 0.58        0.58        0.58 (best: 0.58        0.58        0.58)
+06-Nov-2014 10:12:35: MacroF1:     0.3755    0.3755    0.3755
+
+
+06-Nov-2014 10:12:35: pass 21 step 1000 train acc: 0.55909 test acc: 0.582       0.582       0.582 (best: 0.582       0.582       0.582)
+06-Nov-2014 10:12:35: pass 21 step 1000 cost: 5.0431     0.89142      4.1517
+06-Nov-2014 10:14:36: MacroF1:     0.3755    0.3755    0.3755
+
+
+06-Nov-2014 10:14:36: pass 23 step 1100 train acc: 0.55978 test acc: 0.582       0.582       0.582 (best: 0.582       0.582       0.582)
+06-Nov-2014 10:16:20: Test data:
+06-Nov-2014 10:16:36: MacroF1:     0.3821    0.3821    0.3821
+
+
+06-Nov-2014 10:16:37: pass 26 step 1200 train acc: 0.5622 test acc: 0.586       0.586       0.586 (best: 0.586       0.586       0.586)
+06-Nov-2014 10:16:37: pass 26 step 1200 cost: 5.0144     0.88779      4.1266
+06-Nov-2014 10:18:37: MacroF1:     0.4925    0.4925    0.4925
+
+
+06-Nov-2014 10:18:37: pass 28 step 1300 train acc: 0.56323 test acc: 0.586       0.586       0.586 (best: 0.586       0.586       0.586)
+06-Nov-2014 10:20:38: MacroF1:     0.4925    0.4925    0.4925
+
+
+06-Nov-2014 10:20:38: pass 30 step 1400 train acc: 0.56496 test acc: 0.586       0.586       0.586 (best: 0.586       0.586       0.586)
+06-Nov-2014 10:20:38: pass 30 step 1400 cost: 4.988     0.88412      4.1039

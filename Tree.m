@@ -18,6 +18,7 @@ classdef Tree < handle
                   % 1 - quantifier
                   % 2 - neg
                   % 3 - quantifier phrase           
+	weight = 1;
     end
     
     methods(Static)
@@ -165,8 +166,8 @@ classdef Tree < handle
                         compNL);
                 end
                 
-                lFeatures = obj.daughters(1).getFeatures();
-                rFeatures = obj.daughters(2).getFeatures();
+                lFeatures = obj.daughters(1).weight*obj.daughters(1).getFeatures();
+                rFeatures = obj.daughters(2).weight*obj.daughters(2).getFeatures();
                 
                 if size(compBias, 2) == 1 % if not untied
                     typeInd = 1;

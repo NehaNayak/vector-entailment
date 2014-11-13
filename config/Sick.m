@@ -44,6 +44,8 @@ if findstr(dataflag, 'sick-ea')
 	relationMap = cell(2, 1);
 	relationMap{1} = containers.Map(hyperParams.relations{1}, 1:length(hyperParams.relations{1}));
 
+    hyperParams.bootstrapFile = '/u/nayakne/scr/vector-entailment/Sick_EA-0.0005-ed0-tr1-pen75-lr0.001/ckpt-best-tr141106191441@6700.mat';
+
     hyperParams.trainFilenames = {'./sick_data/SICK_train_parsed_exactAlign.txt'};    
     hyperParams.testFilenames = {'./sick_data/SICK_trial_parsed_exactAlign.txt', ...
     				 './sick_data/SICK_trial_parsed_justneg_exactAlign.txt', ...
@@ -60,6 +62,8 @@ elseif findstr(dataflag, 'sick-only')
    	hyperParams.relations = {{'ENTAILMENT', 'CONTRADICTION', 'NEUTRAL'}};
 	relationMap = cell(2, 1);
 	relationMap{1} = containers.Map(hyperParams.relations{1}, 1:length(hyperParams.relations{1}));
+    
+	hyperParams.bootstrapFile = '/u/nayakne/scr/vector-entailment/Sick_Only-0.0005-ed0-tr1-pen75-lr0.001/ckpt-best-tr141106191634@5900.mat';
 
     hyperParams.trainFilenames = {'./sick_data/SICK_train_parsed.txt'};    
     hyperParams.testFilenames = {'./sick_data/SICK_trial_parsed.txt', ...

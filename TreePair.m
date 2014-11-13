@@ -8,7 +8,14 @@ classdef TreePair < handle
     
 	methods(Static)
 	
-	function [p,h,weights] = makeTreePair(iTextp,iTexth,wordMap,theta,decoder, wordFeatures, hyperParams)
+	function [p,h,weights] = makeTreePair(iTextp,iTexth,wordMap, hyperParams)
+
+		a = load(hyperParams.bootstrapFile);
+    		modelState = a.modelState;
+		theta=modelState.theta;
+		decoder=modelState.thetaDecoder;
+		wordFeatures=modelState.constWordFeatures;
+
 		p = Tree.makeTree(iTextp,wordMap);
 		h = Tree.makeTree(iTexth,wordMap);
 		
@@ -17,6 +24,8 @@ classdef TreePair < handle
 		
 		weights = zeros(pSubtreesLength,hSubtreesLength);
 		[blank, weights] = TreePair.comparePtoH(p, h, 1, theta, decoder, wordFeatures, hyperParams, weights);
+		blank = TreePair.assignPWeights(p,1,weights);
+		blank = TreePair.assignHWeights(h,1,weights);
 	end
 
 	function [newInd, weights] = comparePtoH(p, h, n, theta, decoder, wordFeatures, hyperParams, weights)
@@ -36,13 +45,41 @@ classdef TreePair < handle
 		end
 	end
 
+	function newInd = assignPWeights(p, n, weights)
+
+		p.weight = max(weights(n,:));
+
+		if isLeaf(p)
+			newInd = n-1;
+			return
+		else
+			nextInd = TreePair.assignPWeights(p.daughters(1), n+1, weights);
+			nextInd = TreePair.assignPWeights(p.daughters(2), nextInd, weights);
+			newInd = nextInd+1;
+		end
+	end
+
+	function newInd = assignHWeights(h, i, weights)
+
+		h.weight = max(weights(:,i));
+
+		if isLeaf(h)
+			newInd = i-1;
+			return
+		else
+			nextInd = TreePair.assignHWeights(h.daughters(1), i+1, weights);
+			nextInd = TreePair.assignHWeights(h.daughters(2), nextInd, weights);
+			newInd = nextInd+1;
+		end
+	end
+
 	function [newInd, weights] = compareH(p, h, n, i, theta, decoder, wordFeatures, hyperParams, weights)
 
 		data = struct('relation', 1, 'leftTree', p.copy(), 'rightTree', h.copy(), 'id', 0, 'score', 0);
 		probsForward=ComputeRelationProbs(theta, decoder, data, wordFeatures, hyperParams);
 		data = struct('relation', 1, 'leftTree', h.copy(), 'rightTree', p.copy(), 'id', 0, 'score', 0);
 		probsReverse=ComputeRelationProbs(theta, decoder, data, wordFeatures, hyperParams);
-		k = 1-0.5*(probsReverse(1)*probsForward(1))
+		k = 1-sqrt(probsReverse(1)*probsForward(1));
 		weights(n,i) = k;
 	
 		if isLeaf(h)
