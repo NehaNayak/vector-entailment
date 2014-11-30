@@ -20,6 +20,10 @@ hyperParams.penultDim = 75;
 % Regularization coefficient.
 hyperParams.lambda = 0.0002;
 
+% Apply dropout to the top feature vector of each tree, preserving activations
+% with this probability. If this is set to 1, dropout is effectively not used.
+hyperParams.dropoutPresProb = 1;
+
 % L1 v. L2 regularization. If no regularization is needed, set
 % lambda to 0 and ignore this parameter.
 hyperParams.norm = 2;
@@ -41,6 +45,10 @@ hyperParams.testFraction = 0.1;
 hyperParams.useThirdOrder = true;
 hyperParams.useThirdOrderComparison = true;
 
+% Use a simple summing layer in place of the composition (R)NN layer.
+% useThirdOrder should be false if this is used.
+hyperParams.useSumming = false;
+
 % If set, train using minFunc. Only partially supported. See GradCheck for an example.
 hyperParams.minFunc = false;
 
@@ -55,6 +63,15 @@ hyperParams.fragmentData = false;
 
 % Whether to initialise trees as pairs
 hyperParams.pairInit=false;
+% If set, store embedding matrix gradients as spare matrices, and only apply regularization
+% to the parameters that are in use at each step. This does nothing if trainWords is false.
+% Useful as long as the vocabulary size is fairly large. (Exact threshold unknown.)
+hyperParams.fastEmbed = false;
+
+% Most parameters will be initialized within the range (-initScale, initScale).
+hyperParams.initScale = 0.01;
+
+hyperParams.eyeScale = 0.1;
 
 %%% minFunc options: %%%
 
@@ -83,21 +100,21 @@ options.testFreq = 100;
 
 % How often to report confusion matrices. 
 % Should be a multiple of testFreq.
-options.confusionFreq = 400;
+options.confusionFreq = 100;
 
 % How often to display which items are misclassified.
 % Should be a multiple of testFreq.
 options.examplesFreq = 800; 
 
 % How often (in steps) to save parameters to disk.
-options.checkpointFreq = 2400; 
+options.checkpointFreq = 20000; 
 
 % The name assigned to the current call to AdaGradSGD. This can be used to
 % distinguish multiple phases of training in the same experiment.
 options.runName = 'tr';
 
 % Reset the sum of squared gradients after this many iterations.
-options.resetSumSqFreq = 500000; % Don't bother.
+options.resetSumSqFreq = 10000;
 
 
 end

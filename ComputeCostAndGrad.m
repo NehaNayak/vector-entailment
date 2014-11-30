@@ -1,5 +1,5 @@
 % Want to distribute this code? Have other questions? -> sbowman@stanford.edu
-function [ cost, grad, pred ] = ComputeCostAndGrad(theta, decoder, dataPoint, constWordFeatures, hyperParams)
+function [ cost, grad, embGrad, pred ] = ComputeCostAndGrad(theta, decoder, dataPoint, separateWordFeatures, hyperParams)
 % Compute cost, gradient, and predicted label for one example.
 
 % Unpack theta
@@ -9,16 +9,18 @@ function [ cost, grad, pred ] = ComputeCostAndGrad(theta, decoder, dataPoint, co
     classifierExtraBias, embeddingTransformMatrix, embeddingTransformBias] ...
     = stack2param(theta, decoder);
 
-if hyperParams.trainWords
+if hyperParams.trainWords && ~hyperParams.fastEmbed
     wordFeatures = trainedWordFeatures;
 else
-    wordFeatures = constWordFeatures;
+    wordFeatures = separateWordFeatures;
 end
 
 DIM = hyperParams.dim;
 
 % Set the number of composition functions
-if ~hyperParams.untied
+if hyperParams.useSumming
+    NUMCOMP = 0;
+elseif ~hyperParams.untied
     NUMCOMP = 1;
 else
     NUMCOMP = 3;
@@ -40,6 +42,9 @@ rightTree.updateFeatures(wordFeatures, compositionMatrices, ...
 
 leftFeatures = leftTree.getFeatures();
 rightFeatures = rightTree.getFeatures();
+
+[leftFeatures, leftMask] = Dropout(leftFeatures, hyperParams.dropoutPresProb);
+[rightFeatures, rightMask] = Dropout(rightFeatures, hyperParams.dropoutPresProb);
 
 % Compute classification tensor layer
 if hyperParams.useThirdOrderComparison
@@ -73,7 +78,7 @@ if nargout > 1
     % Initialize the gradients
     if hyperParams.trainWords
       localWordFeatureGradients = sparse([], [], [], ...
-          size(wordFeatures, 1), size(wordFeatures, 2), 10);
+          size(wordFeatures, 1), size(wordFeatures, 2), hyperParams.dim * 25);
     else
       localWordFeatureGradients = zeros(0); 
     end
@@ -108,17 +113,20 @@ if nargout > 1
             classifierDeltaRight] = ...
           ComputeTensorLayerGradients(leftFeatures, rightFeatures, ...
               classifierMatrices, classifierMatrix, classifierBias, ...
-              extraDelta, hyperParams.classNLDeriv, tensorInnerOutput);
+              extraDelta, hyperParams.compNLDeriv, tensorInnerOutput);
     else
          % Compute gradients for classification first layer
          localClassificationMatricesGradients = zeros(0, 0, 0);  
          [localClassificationMatrixGradients, ...
             localClassificationBiasGradients, classifierDeltaLeft, ...
             classifierDeltaRight] = ...
-          ComputeLayerGradients(leftFeatures, rightFeatures, ...
+          ComputeRNNLayerGradients(leftFeatures, rightFeatures, ...
               classifierMatrix, classifierBias, ...
-              extraDelta, hyperParams.classNLDeriv, innerOutput);
+              extraDelta, hyperParams.compNLDeriv, innerOutput);
     end
+
+    classifierDeltaLeft = classifierDeltaLeft .* leftMask;
+    classifierDeltaRight = classifierDeltaRight .* rightMask;
 
     [ upwardWordGradients, ...
       upwardCompositionMatricesGradients, ...
@@ -131,6 +139,7 @@ if nargout > 1
                             compositionBias,  embeddingTransformMatrix, embeddingTransformBias, ...
                             hyperParams.compNLDeriv, hyperParams);
                       
+
     if hyperParams.trainWords
       localWordFeatureGradients = localWordFeatureGradients ...
           + upwardWordGradients;
@@ -172,19 +181,30 @@ if nargout > 1
         + upwardEmbeddingTransformBiasGradients;
     
     % Pack up gradients
-    grad = param2stack(localClassificationMatricesGradients, ...
-        localClassificationMatrixGradients, ...
-        localClassificationBiasGradients, localSoftmaxGradient, ...
-        localWordFeatureGradients, localCompositionMatricesGradients, ...
-        localCompositionMatrixGradients, localCompositionBiasGradients, ...
-        localExtraMatrixGradients, localExtraBiasGradients, ...
-        localEmbeddingTransformMatrixGradients, localEmbeddingTransformBiasGradients);
-
+    if hyperParams.fastEmbed
+      grad = param2stack(localClassificationMatricesGradients, ...
+          localClassificationMatrixGradients, ...
+          localClassificationBiasGradients, localSoftmaxGradient, ...
+          [], localCompositionMatricesGradients, ...
+          localCompositionMatrixGradients, localCompositionBiasGradients, ...
+          localExtraMatrixGradients, localExtraBiasGradients, ...
+          localEmbeddingTransformMatrixGradients, localEmbeddingTransformBiasGradients);
+      embGrad = localWordFeatureGradients;
+    else
+      grad = param2stack(localClassificationMatricesGradients, ...
+          localClassificationMatrixGradients, ...
+          localClassificationBiasGradients, localSoftmaxGradient, ...
+          localWordFeatureGradients, localCompositionMatricesGradients, ...
+          localCompositionMatrixGradients, localCompositionBiasGradients, ...
+          localExtraMatrixGradients, localExtraBiasGradients, ...
+          localEmbeddingTransformMatrixGradients, localEmbeddingTransformBiasGradients); 
+      embGrad = [];
+    end
 end
 
 % Compute prediction. Note: This will be in integer, indexing into whichever class set was used
 % for this example.
-if nargout > 2
+if nargout > 3
     [~, pred] = max(relationProbs);
 end
 

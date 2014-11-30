@@ -5,6 +5,15 @@ function modelState = TestAndLog(CostGradFunc, modelState, options, trainingData
 
 % Do mid-run testing
 if mod(modelState.step, options.testFreq) == 0
+    Log(hyperParams.statlog, ['Theta min/mean/meanabs/max: ',  num2str(min(modelState.theta)), ' ', ...
+                                          num2str(mean(modelState.theta)), ' ', ...
+                                          num2str(mean(abs(modelState.theta))), ' ', ...
+                                          num2str(max(modelState.theta))]);
+
+    Log(hyperParams.statlog, ['Word min/mean/meanabs/max: ',  num2str(min(modelState.separateWordFeatures(:))), ' ', ...
+                                      num2str(mean(modelState.separateWordFeatures(:))), ' ', ...
+                                      num2str(mean(abs(modelState.separateWordFeatures(:)))), ' ', ...
+                                      num2str(max(modelState.separateWordFeatures(:)))]);
 
     % Test on training data
     cost = mean(modelState.lastHundredCosts(1:min(modelState.step, 100)));
@@ -16,7 +25,7 @@ if mod(modelState.step, options.testFreq) == 0
         else
             hyperParams.showExamples = false;
         end
-        [cost, ~, acc] = CostGradFunc(modelState.theta, modelState.thetaDecoder, trainingData, modelState.constWordFeatures, hyperParams);
+        [cost, ~, ~, acc] = CostGradFunc(modelState.theta, modelState.thetaDecoder, trainingData, modelState.separateWordFeatures, hyperParams);
     end
 
     % Test on test data
@@ -37,7 +46,7 @@ if mod(modelState.step, options.testFreq) == 0
         if (mod(modelState.step, options.examplesFreq) == 0 || mod(modelState.step, options.confusionFreq) == 0) && modelState.step > 0
             Log(hyperParams.statlog, 'Test data:');
         end
-        testAcc = TestModel(CostGradFunc, modelState.theta, modelState.thetaDecoder, testDatasets, modelState.constWordFeatures, hyperParams);
+        testAcc = TestModel(CostGradFunc, modelState.theta, modelState.thetaDecoder, testDatasets, modelState.separateWordFeatures, hyperParams);
         modelState.bestTestAcc = max(testAcc, modelState.bestTestAcc);
         hyperParams.showExamples = false;
 

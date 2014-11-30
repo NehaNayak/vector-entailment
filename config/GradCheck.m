@@ -1,4 +1,4 @@
-function [ hyperParams, options, wordMap, relationMap ] = AndOr(transDepth, topDepth, tot, trainwords)
+function [ hyperParams, options, wordMap, relationMap ] = GradCheck(transDepth, topDepth, tot, summing, trainwords, fastemb)
 
 [hyperParams, options] = Defaults();
 
@@ -17,12 +17,22 @@ hyperParams.embeddingTransformDepth = transDepth;
 
 hyperParams.topDepth = topDepth;
 
+% If set, store embedding matrix gradients as spare matrices, and only apply regularization
+% to the parameters that are in use at each step.
+hyperParams.fastEmbed = fastemb;
+
 % Regularization coefficient.
 hyperParams.lambda = 0.02;
+
+% Hack: -1 means to always drop out the same one unit.
+hyperParams.dropoutPresProb = -1;
 
 % Use NTN layers in place of NN layers.
 hyperParams.useThirdOrder = tot;
 hyperParams.useThirdOrderComparison = tot;
+
+% Use a simple summing layer function for composition.
+hyperParams.useSumming = summing;
 
 hyperParams.loadWords = false;
 hyperParams.trainWords = true;
