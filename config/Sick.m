@@ -5,6 +5,7 @@ function [ hyperParams, options, wordMap, relationMap ] = Sick(dataflag, transDe
 
 % The dimensionality of the word/phrase vectors. Currently fixed at 25 to match
 % the GloVe vectors.
+%hyperParams.dim = 50;
 hyperParams.dim = 25;
 
 % The number of embedding transform layers. topDepth > 0 means NN layers will be
@@ -54,8 +55,7 @@ hyperParams.fragmentData = false;
 options.miniBatchSize = mbs;
 
 options.lr = lr;
-
-if findstr(dataflag, 'sick-ea')
+if findstr(dataflag, 'sick-sa')
     wordMap = ...
         InitializeMaps('sick_data/sick_words_t4.txt');
     hyperParams.vocabName = 'sot4'; 
@@ -65,7 +65,26 @@ if findstr(dataflag, 'sick-ea')
 	relationMap = cell(2, 1);
 	relationMap{1} = containers.Map(hyperParams.relations{1}, 1:length(hyperParams.relations{1}));
 
-    hyperParams.bootstrapFile = '/u/nayakne/scr/vector-entailment/Sick_EA-0.0005-ed0-tr1-pen75-lr0.001/ckpt-best-tr141106191441@6700.mat';
+    hyperParams.bootstrapFile = '/u/nayakne/NLP-HOME/scr/vector-entailment/Sick_EA-0.0005-ed0-tr1-pen75-lr0.001/ckpt-best-tr141106191441@6700.mat';
+
+    hyperParams.trainFilenames = {'./sick_data/SICK_train_parsed_searchAlign.txt'};    
+    hyperParams.testFilenames = {'./sick_data/SICK_trial_parsed_searchAlign.txt', ...
+    				 './sick_data/SICK_trial_parsed_justneg_searchAlign.txt', ...
+    				 './sick_data/SICK_trial_parsed_noneg_searchAlign.txt', ...
+    				 './sick_data/SICK_trial_parsed_18plusparens_searchAlign.txt', ...
+    				 './sick_data/SICK_trial_parsed_lt18_parens_searchAlign.txt'};
+    hyperParams.splitFilenames = {};
+elseif findstr(dataflag, 'sick-ea')
+    wordMap = ...
+        InitializeMaps('sick_data/sick_words_t4.txt');
+    hyperParams.vocabName = 'sot4'; 
+
+    hyperParams.numRelations = 3;
+   	hyperParams.relations = {{'ENTAILMENT', 'CONTRADICTION', 'NEUTRAL'}};
+	relationMap = cell(2, 1);
+	relationMap{1} = containers.Map(hyperParams.relations{1}, 1:length(hyperParams.relations{1}));
+
+    hyperParams.bootstrapFile = '/u/nayakne/NLP-HOME/scr/vector-entailment/Sick_EA-0.0005-ed0-tr1-pen75-lr0.001/ckpt-best-tr141106191441@6700.mat';
 
     hyperParams.trainFilenames = {'./sick_data/SICK_train_parsed_exactAlign.txt'};    
     hyperParams.testFilenames = {'./sick_data/SICK_trial_parsed_exactAlign.txt', ...

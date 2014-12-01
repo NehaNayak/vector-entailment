@@ -1,6 +1,7 @@
 function [ vocab, fullVocab, fullWordmap ] = InitializeVocabFromFile(wordMap, loc)
 
 DIM = 25;
+%DIM = 50;
 loadFromMat = false;
 wordlist = wordMap.keys();
 
@@ -15,10 +16,12 @@ if loadFromMat
 else
     % The vocabulary that comes with the vector source.
     fid = fopen('/user/sbowman/quant/sick_data/words_25d.txt');
+%fid = fopen('glove/words_50d.txt');
     words = textscan(fid,'%s','Delimiter','\n');
     words = words{1};
     fclose(fid);
     fullVocab = dlmread('/user/sbowman/quant/sick_data/vectors_25d.txt', ' ', 0, 1);
+    %fullVocab = dlmread('glove/vectors_50d.txt', ' ', 0, 1);
 end
 
 fullWordmap = containers.Map(words,2:length(words) + 1);
