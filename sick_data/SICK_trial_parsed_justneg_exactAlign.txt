@@ -1,4 +1,3 @@
-CONTRADICTION	 ( ( ( A man ) ( in red:a_red_uniform ) ) ( is a:making_a_jump_in_a_dirt_bike_race ) ) 	 ( There ( is ( ( no man ) ( in ( red:a_red_uniform a:making_a_jump_in_a_dirt_bike_race ) ) ) ) ) 	3.4	6971
 CONTRADICTION	 ( There ( is ( ( no woman ) kissed:being_kissed_by_a_man ) ) ) 	 ( ( A woman ) ( is kissed:being_kissed_by_a_man ) ) 	4.2	913
 CONTRADICTION	 ( There ( is ( no ( boy ( ( ( playing outdoors ) and ) ( there ( is ( ( no man ) smiling ) ) ) ) ) ) ) ) 	 ( ( The ( young boys ) ) ( are ( playing ( ( ( outdoors and ) ( the man ) ) ( is ( smiling nearby ) ) ) ) ) ) 	3.6	4
 CONTRADICTION	 ( There ( is ( ( no woman ) ( ( ( using ( an ( eye pencil ) ) ) and ) ( ( applying ( eye liner ) ) her:to_her_eyelid ) ) ) ) ) 	 ( ( A woman ) ( is ( ( applying cosmetics ) her:to_her_eyelid ) ) ) 	3.1	3123

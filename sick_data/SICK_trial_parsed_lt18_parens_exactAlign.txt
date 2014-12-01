@@ -1,4 +1,3 @@
-%entailment_judgment	sentence_A	sentence_B	relatedness_score	pair_ID
 NEUTRAL	 ( young:A_young_girl ( is dancing ) ) 	 ( young:A_young_girl ( is ( standing ( on ( one leg ) ) ) ) ) 	2.7	6592
 ENTAILMENT	 ( ( A man ) ( is ( walking ( in ( the rain ) ) ) ) ) 	 ( It ( is ( raining ( on ( a ( walking man ) ) ) ) ) ) 	4.9	3670
 NEUTRAL	 ( ( A woman ) ( is ( slicing ( a carrot ) ) ) ) 	 ( ( A potato ) ( is ( being ( sliced ( by ( a woman ) ) ) ) ) ) 	3	1170

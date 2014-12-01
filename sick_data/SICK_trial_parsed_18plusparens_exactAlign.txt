@@ -1,4 +1,3 @@
-NEUTRAL	 ( ( A man ) ( is ( ( falling off ) ( ( a surfboard ) ( in ( the water ) ) ) ) ) ) 	 ( ( A surfer ) ( is ( riding ( the wave ) ) ) ) 	3.5	7464
 NEUTRAL	 ( ( A ( white dog ) ) ( is ( ( approaching ( a ( golden dog ) ) ) ( on ( pebbly beach ) ) ) ) ) 	 ( ( Two dogs ) ( are ( playing ( on ( a ( rocky beach ) ) ) ) ) ) 	2.9	9036
 ENTAILMENT	 ( man:A_man_and_a_woman ( are ( ( walking together ) ( through ( the woods ) ) ) ) ) 	 ( man:A_man_and_a_woman ( are ( walking ( through ( a ( wooded area ) ) ) ) ) ) 	4.6	1192
 NEUTRAL	 ( ( ( ( ( A ( little boy ) ) , ) ( who ( looks fearful ) ) ) , ) ( ( is ( on ( a ( climbing wall ) ) ) ) . ) ) 	 ( ( A boy ) ( ( ( is ( ( climbing up ) ( ( a wall ) ( artificially ( built ( for climbing ) ) ) ) ) ) and ) ( is ( attached ( to ( a rope ) ) ) ) ) ) 	3.5	619
